@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Weddies – Voetbalwedstrijden bij jou in de buurt</title>
+<meta name="description" content="Weddies toont alle voetbalwedstrijden bij jou in de buurt op één kaart en houdt bij welke stadions je hebt bezocht. Binnenkort voor iPhone.">
+<meta name="theme-color" content="#012417">
+<link rel="canonical" href="https://weddiesapp.com/">
+<link rel="icon" type="image/png" href="img/favicon-64.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:title" content="Weddies">
+<meta property="og:description" content="Every football match nearby, on one map. With a personal logbook of every ground you visit.">
+<meta property="og:image" content="https://weddiesapp.com/img/og.jpg">
+<meta property="og:url" content="https://weddiesapp.com/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Zodra de app in de App Store staat: het nummer uit de App Store-link invullen, dan toont Safari op de iPhone
+     bovenaan een balk "Openen / Downloaden".
+<meta name="apple-itunes-app" content="app-id=0000000000"> -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Weddies", "operatingSystem": "iOS", "applicationCategory": "SportsApplication", "description": "Weddies shows every football match near you on one map and keeps a logbook of every ground you visit.", "url": "https://weddiesapp.com/", "image": "https://weddiesapp.com/img/og.jpg", "inLanguage": ["nl", "en", "de"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}</script>
+<script>document.documentElement.classList.add("js");</script>
+<link rel="stylesheet" href="style.css?v=14">
+</head>
+<body class="voorpagina">
+<div class="kaartlaag" aria-hidden="true"><div class="kaartlaag-in"><span class="pin p0" style="left:12%;top:18%"></span><span class="pin p1" style="left:78%;top:12%"></span><span class="pin p2" style="left:88%;top:46%"></span><span class="pin p3" style="left:8%;top:62%"></span><span class="pin p0" style="left:64%;top:74%"></span><span class="pin p1" style="left:35%;top:40%"></span><span class="pin p2" style="left:52%;top:22%"></span><span class="pin p3" style="left:24%;top:88%"></span></div></div>
+
+<!-- Banner die meebeweegt: doorzichtig bovenaan, groen met vervaging zodra je scrolt -->
+<header class="kopbalk" id="kopbalk">
+  <div class="kopbalk-in">
+    <a class="merk" href="#top"><img src="img/logo.png" alt="" width="34" height="34">WEDDIES</a>
+    <nav class="kopnav">
+      <a href="#functies" data-t="nav_functies">Functies</a>
+      <a href="support" data-t="nav_support">Support</a>
+    </nav>
+    <div class="kopbalk-rechts">
+      <span class="klok" aria-hidden="true"><span class="klok-stip"></span><span class="klok-tijd">Aftrap</span></span>
+      <div class="talen" role="group" aria-label="Taal / Language / Sprache">
+        <button type="button" data-kies="nl" aria-pressed="true">NL</button>
+        <button type="button" data-kies="en" aria-pressed="false">EN</button>
+        <button type="button" data-kies="de" aria-pressed="false">DE</button>
+      </div>
+      <a class="kop-store" role="link" aria-disabled="true" data-store-kop data-t="kop_store">Binnenkort in de App Store</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-in">
+    <div class="hero-tekst onthul">
+      <p class="hero-label"><img src="img/logo.png" alt="" width="28" height="28"><span data-t="hero_label">Voor groundhoppers en voetbalfans</span></p>
+      <h1 data-t="hero_titel">Elke wedstrijd in de buurt, op één kaart.</h1>
+      <p class="intro" data-t="hero_intro">Weddies toont alle voetbalwedstrijden om je heen, van de hoogste divisie tot de lagere klassen, in negen landen. Met een persoonlijk logboek van elk stadion dat je bezoekt.</p>
+      <div class="winkels"><a class="knop-store" role="link" aria-disabled="true" data-store>
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10.5 18.5h3"/></svg>
+        <span><small data-t="store_klein">Binnenkort in de</small><span data-t="store_groot">App Store</span></span>
+      </a><span class="knop-store knop-play" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 3.5v17l14-8.5z"/></svg><span><small data-t="play_klein">Verwacht in 2027 op</small><span>Google Play</span></span></span></div>
+      
+    </div>
+    <div class="toestellen onthul" aria-hidden="false">
+      <div class="gloed"></div>
+      <div class="telefoon achter"><img src="img/en-kaart.webp" data-scherm="kaart" width="640" height="1387" data-t-alt="alt_kaart" alt="De kaart van Weddies met wedstrijden in Londen"></div>
+      <div class="telefoon voor"><img src="img/en-logboek.webp" data-scherm="logboek" width="640" height="1387" data-t-alt="alt_logboek" alt="Het logboek met 94 grounds, 12 wedstrijden en de laatste bezoeken"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Bewegende band met competities (namen niet vertalen) -->
+<section class="band" aria-labelledby="band-titel">
+  <p class="band-titel" id="band-titel" data-t="band_titel">100 competities in negen landen</p>
+  <div class="band-rails">
+    <ul class="band-spoor">
+      <li><img class="vlag" src="img/vlag/nl.svg" alt="" width="24" height="16">Eredivisie</li><li><img class="vlag" src="img/vlag/eng.svg" alt="" width="24" height="16">Premier League</li><li><img class="vlag" src="img/vlag/de.svg" alt="" width="24" height="16">Bundesliga</li><li><img class="vlag" src="img/vlag/es.svg" alt="" width="24" height="16">La Liga</li>
+      <li><img class="vlag" src="img/vlag/it.svg" alt="" width="24" height="16">Serie A</li><li><img class="vlag" src="img/vlag/fr.svg" alt="" width="24" height="16">Ligue 1</li><li><img class="vlag" src="img/vlag/be.svg" alt="" width="24" height="16">Jupiler Pro League</li><li><img class="vlag" src="img/vlag/sco.svg" alt="" width="24" height="16">Premiership</li>
+      <li><img class="vlag" src="img/vlag/dk.svg" alt="" width="24" height="16">Superliga</li><li><img class="vlag" src="img/vlag/nl.svg" alt="" width="24" height="16">Eerste Divisie</li><li><img class="vlag" src="img/vlag/eng.svg" alt="" width="24" height="16">Championship</li><li><img class="vlag" src="img/vlag/de.svg" alt="" width="24" height="16">2. Bundesliga</li>
+      <li><img class="vlag" src="img/vlag/es.svg" alt="" width="24" height="16">Segunda División</li><li><img class="vlag" src="img/vlag/it.svg" alt="" width="24" height="16">Serie B</li><li><img class="vlag" src="img/vlag/fr.svg" alt="" width="24" height="16">Ligue 2</li><li><img class="vlag" src="img/vlag/nl.svg" alt="" width="24" height="16">Tweede Divisie</li>
+      <li><img class="vlag" src="img/vlag/eng.svg" alt="" width="24" height="16">National League</li><li><img class="vlag" src="img/vlag/de.svg" alt="" width="24" height="16">3. Liga</li><li><img class="vlag" src="img/vlag/es.svg" alt="" width="24" height="16">Primera RFEF</li><li><img class="vlag" src="img/vlag/it.svg" alt="" width="24" height="16">Serie C</li>
+      <li><img class="vlag" src="img/vlag/nl.svg" alt="" width="24" height="16">Derde Divisie</li><li><img class="vlag" src="img/vlag/de.svg" alt="" width="24" height="16">Regionalliga</li><li><img class="vlag" src="img/vlag/eng.svg" alt="" width="24" height="16">League One</li><li><img class="vlag" src="img/vlag/sco.svg" alt="" width="24" height="16">Highland League</li>
+      <li><img class="vlag" src="img/vlag/be.svg" alt="" width="24" height="16">Challenger Pro League</li><li><img class="vlag" src="img/vlag/dk.svg" alt="" width="24" height="16">1. Division</li><li><img class="vlag" src="img/vlag/fr.svg" alt="" width="24" height="16">National 2</li><li><img class="vlag" src="img/vlag/eng.svg" alt="" width="24" height="16">League Two</li>
+    </ul>
+  </div>
+</section>
+
+<main class="kenmerken" id="functies">
+  <div class="veldvlak" aria-hidden="true"><div class="goalmelding" aria-hidden="true"><span data-t="goal">GOAL!</span><i style="--h:0deg;--d:120px"></i><i style="--h:35deg;--d:95px"></i><i style="--h:70deg;--d:130px"></i><i style="--h:110deg;--d:100px"></i><i style="--h:150deg;--d:125px"></i><i style="--h:190deg;--d:90px"></i><i style="--h:230deg;--d:120px"></i><i style="--h:270deg;--d:105px"></i><i style="--h:310deg;--d:130px"></i><i style="--h:345deg;--d:95px"></i></div><span class="zijlijn links"><span class="zijlijn-lijn"></span><span class="bal"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#F9F5EB"/><path d="M12 7.2l3.9 2.8-1.5 4.6H9.6L8.1 10z" fill="#012417"/><path d="M12 7.2V2.5M15.9 10l4.4-1.5M14.4 14.6l2.8 3.8M9.6 14.6l-2.8 3.8M8.1 10L3.7 8.5" stroke="#012417" stroke-width="1.2" fill="none"/><circle cx="12" cy="12" r="11" fill="none" stroke="#012417" stroke-opacity=".25"/></svg></span></span><span class="zijlijn rechts"><span class="zijlijn-lijn"></span></span><div class="veldkant boven onthul"><span class="doellijn"></span><svg class="hoekboog links" viewBox="0 0 40 40" width="40" height="40"><path class="lijntje" pathLength="1" d="M0 34A34 34 0 0 0 34 0"/><path class="vlagpaal" d="M0 0V-22"/><path class="vlag" d="M0 -22l-14 5 14 5z"/></svg><svg class="hoekboog rechts" viewBox="0 0 40 40" width="40" height="40"><path class="lijntje" pathLength="1" d="M6 0A34 34 0 0 0 40 34"/><path class="vlagpaal" d="M40 0V-22"/><path class="vlag" d="M40 -22l14 5-14 5z"/></svg><svg class="zestien-groep" viewBox="-180 -30 360 210" width="360" height="210"><path class="lijntje" pathLength="1" d="M-130 0V150H130V0"/><path class="lijntje" pathLength="1" d="M-60 0V52H60V0"/><path class="lijntje" pathLength="1" d="M-46 150A60 60 0 0 0 46 150"/><path class="lijntje" pathLength="1" d="M-36 0V-22H36V0"/><circle class="stip" cx="0" cy="106" r="3.5"/></svg></div><div class="middenlijn onthul"><span class="lijn"></span><svg class="middencirkel" viewBox="-110 -110 220 220" width="220" height="220"><path class="lijntje" pathLength="1" d="M0 -95A95 95 0 1 1 0 95A95 95 0 1 1 0 -95"/><circle class="stip" cx="0" cy="0" r="4.5"/></svg></div><div class="veldkant onder onthul"><span class="doellijn"></span><svg class="hoekboog links" viewBox="0 0 40 40" width="40" height="40"><path class="lijntje" pathLength="1" d="M0 34A34 34 0 0 0 34 0"/><path class="vlagpaal" d="M0 0V-22"/><path class="vlag" d="M0 -22l-14 5 14 5z"/></svg><svg class="hoekboog rechts" viewBox="0 0 40 40" width="40" height="40"><path class="lijntje" pathLength="1" d="M6 0A34 34 0 0 0 40 34"/><path class="vlagpaal" d="M40 0V-22"/><path class="vlag" d="M40 -22l14 5-14 5z"/></svg><svg class="zestien-groep" viewBox="-180 -30 360 210" width="360" height="210"><path class="lijntje" pathLength="1" d="M-130 0V150H130V0"/><path class="lijntje" pathLength="1" d="M-60 0V52H60V0"/><path class="lijntje" pathLength="1" d="M-46 150A60 60 0 0 0 46 150"/><path class="lijntje" pathLength="1" d="M-36 0V-22H36V0"/><circle class="stip" cx="0" cy="106" r="3.5"/></svg></div></div>
+  <section class="blok onthul">
+    <div class="tekst">
+      <p class="label"><span class="nr">01</span><span data-t="k0_label">Logboek</span></p>
+      <h2 data-t="k0_titel">Elke wedstrijd in je logboek</h2>
+      <p class="uitleg" data-t="k0_uitleg">Leg met één tik vast dat je erbij was. Weddies houdt automatisch je grounds, wedstrijden, landen en doelpunten bij, met je beoordeling van sfeer, eten en bier, en notities en foto's per bezoek.</p>
+    </div>
+    <div class="podium"><div class="telefoon"><img src="img/en-beoordeling.webp" data-scherm="beoordeling" width="640" height="1387" loading="lazy" data-t-alt="alt_beoordeling" alt="Een bezoek beoordelen op sfeer, eten en bier"></div></div>
+  </section>
+  <section class="blok onthul">
+    <svg class="dugout links onthul" viewBox="-4 -12 50 144" width="50" height="144" aria-hidden="true"><rect class="zone" x="-2" y="-8" width="46" height="136" rx="6"/><path class="lijntje" pathLength="1" d="M38 0H8A8 8 0 0 0 0 8V112A8 8 0 0 0 8 120H38"/><path class="stoel" d="M7 14H15M7 26H15M7 38H15M7 50H15M7 62H15M7 74H15M7 86H15M7 98H15M7 110H15"/></svg>
+    <div class="tekst">
+      <p class="label"><span class="nr">02</span><span data-t="k1_label">Kaart</span></p>
+      <h2 data-t="k1_titel">Aftrap, stand en route in één tik</h2>
+      <p class="uitleg" data-t="k1_uitleg">Bekijk alle wedstrijden van vandaag, morgen of later in de week. Tik op een wedstrijd voor de aftrap, de stand en de route naar het stadion. Met “Zin in voetbal?” kies je een moment en een maximale reistijd, en Weddies kiest een wedstrijd voor je.</p>
+    </div>
+    <div class="podium"><div class="telefoon"><img src="img/en-wedstrijd.webp" data-scherm="wedstrijd" width="640" height="1387" loading="lazy" data-t-alt="alt_wedstrijd" alt="Een wedstrijdkaartje boven het stadion in 3D"></div></div>
+  </section>
+
+  <section class="blok onthul">
+    <div class="tekst">
+      <p class="label"><span class="nr">03</span><span data-t="k2_label">Paspoort</span></p>
+      <h2 data-t="k2_titel">Houd elk stadion bij</h2>
+      <p class="uitleg" data-t="k2_uitleg">Elk bezoek komt in je paspoort: een kaart met al je grounds, badges en je voortgang per competitie, inclusief The 92. Alleen wedstrijden die je in het stadion hebt gezien tellen mee.</p>
+    </div>
+    <div class="podium"><div class="telefoon"><img src="img/en-paspoort.webp" data-scherm="paspoort" width="640" height="1387" loading="lazy" data-t-alt="alt_paspoort" alt="Het paspoort met 94 bezochte grounds op de kaart van Europa"></div></div>
+  </section>
+
+  <section class="blok onthul">
+    <svg class="dugout rechts onthul" viewBox="-4 -12 50 144" width="50" height="144" aria-hidden="true"><rect class="zone" x="-2" y="-8" width="46" height="136" rx="6"/><path class="lijntje" pathLength="1" d="M38 0H8A8 8 0 0 0 0 8V112A8 8 0 0 0 8 120H38"/><path class="stoel" d="M7 14H15M7 26H15M7 38H15M7 50H15M7 62H15M7 74H15M7 86H15M7 98H15M7 110H15"/></svg>
+    <div class="tekst">
+      <p class="label"><span class="nr">04</span><span data-t="k3_label">Delen</span></p>
+      <h2 data-t="k3_titel">Deel je bezoek als story</h2>
+      <p class="uitleg" data-t="k3_uitleg">Maak na afloop met één tik een story met de uitslag, het stadion en je groundnummer, en deel die direct op Instagram.</p>
+    </div>
+    <div class="podium"><div class="telefoon"><img src="img/en-story.webp" data-scherm="story" width="640" height="1387" loading="lazy" data-t-alt="alt_story" alt="Een story van een wedstrijd op Stamford Bridge"></div></div>
+  </section>
+
+  <section class="blok onthul">
+    <div class="tekst">
+      <p class="label"><span class="nr">05</span><span data-t="k4_label">Mijn club</span></p>
+      <h2 data-t="k4_titel">Je eigen club altijd in beeld</h2>
+      <p class="uitleg" data-t="k4_uitleg">De volgende wedstrijd, het programma en de uitwedstrijden van je club en van de clubs die je volgt, in één overzicht.</p>
+    </div>
+    <div class="podium"><div class="telefoon"><img src="img/en-mijn-club.webp" data-scherm="mijn-club" width="640" height="1387" loading="lazy" data-t-alt="alt_club" alt="Het scherm Mijn club met de volgende wedstrijd"></div></div>
+  </section>
+</main>
+
+<section class="opstelling" id="opstelling">
+  <div class="opstelling-in">
+    <div class="opstelling-tekst onthul">
+      <p class="label" data-t="op_label">Het elftal</p>
+      <h2 data-t="op_kop">Elf functies, één team</h2>
+      <p class="uitleg" data-t="op_hint">Tik op een speler voor uitleg.</p>
+      <div class="spelerkaart" aria-live="polite">
+        <p class="spelerkaart-nr"><span class="rug">9</span><span class="spelerkaart-naam" data-t="sp9_naam">Kaart</span></p>
+        <p class="spelerkaart-tekst" data-t="sp9_tekst">Alle wedstrijden van vandaag tot volgende week op één kaart, met de route naar het stadion.</p>
+      </div>
+    </div>
+    <div class="miniveld onthul" role="group" aria-label="Opstelling">
+      <span class="mv-middenlijn"></span><span class="mv-cirkel"></span><span class="mv-zestien boven"></span><span class="mv-zestien onder"></span>
+      <button type="button" class="speler" data-nr="9" style="left:50%;top:15%" aria-pressed="true"><span class="rug">9</span><span class="naam" data-t="sp9_naam">Kaart</span></button><button type="button" class="speler" data-nr="11" style="left:20%;top:19%" aria-pressed="false"><span class="rug">11</span><span class="naam" data-t="sp11_naam">Story</span></button><button type="button" class="speler" data-nr="7" style="left:80%;top:19%" aria-pressed="false"><span class="rug">7</span><span class="naam" data-t="sp7_naam">Zin in voetbal?</span></button><button type="button" class="speler" data-nr="8" style="left:28%;top:42%" aria-pressed="false"><span class="rug">8</span><span class="naam" data-t="sp8_naam">Wedstrijdinfo</span></button><button type="button" class="speler" data-nr="10" style="left:50%;top:39%" aria-pressed="false"><span class="rug">10</span><span class="naam" data-t="sp10_naam">Mijn club</span></button><button type="button" class="speler" data-nr="6" style="left:72%;top:42%" aria-pressed="false"><span class="rug">6</span><span class="naam" data-t="sp6_naam">Spelers</span></button><button type="button" class="speler" data-nr="3" style="left:14%;top:65%" aria-pressed="false"><span class="rug">3</span><span class="naam" data-t="sp3_naam">Vrienden</span></button><button type="button" class="speler" data-nr="4" style="left:38%;top:68%" aria-pressed="false"><span class="rug">4</span><span class="naam" data-t="sp4_naam">Badges</span></button><button type="button" class="speler" data-nr="5" style="left:62%;top:68%" aria-pressed="false"><span class="rug">5</span><span class="naam" data-t="sp5_naam">The 92</span></button><button type="button" class="speler" data-nr="2" style="left:86%;top:65%" aria-pressed="false"><span class="rug">2</span><span class="naam" data-t="sp2_naam">Paspoort</span></button><button type="button" class="speler" data-nr="1" style="left:50%;top:89%" aria-pressed="false"><span class="rug">1</span><span class="naam" data-t="sp1_naam">Logboek</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="europa">
+  <div class="europa-in">
+    <div class="europa-tekst onthul">
+      <p class="label" data-t="eu_label">Op de kaart</p>
+      <h2 data-t="eu_kop">1.832 stadions in negen landen</h2>
+      <p class="uitleg" data-t="eu_tekst">Elke stip is een stadion in Weddies, van de Premier League tot de Highland League. En dit is pas het begin: er komen nog meer landen en competities bij.</p>
+      <ul class="landen"><li><button type="button" data-land="nl"><img class="vlag" src="img/vlag/nl.svg" alt="" width="24" height="16"><span class="land-naam" data-t="land_nl">Nederland</span><span class="land-meta" data-meta="4|94"></span></button></li><li><button type="button" data-land="be"><img class="vlag" src="img/vlag/be.svg" alt="" width="24" height="16"><span class="land-naam" data-t="land_be">België</span><span class="land-meta" data-meta="6|102"></span></button></li><li><button type="button" data-land="eng"><img class="vlag" src="img/vlag/eng.svg" alt="" width="24" height="16"><span class="land-naam" data-t="land_eng">Engeland</span><span class="land-meta" data-meta="11|277"></span></button></li><li><button type="button" data-land="sco"><img class="vlag" src="img/vlag/sco.svg" alt="" width="24" height="16"><span class="land-naam" data-t="land_sco">Schotland</span><span class="land-meta" data-meta="6|90"></span></button></li><li><button type="button" data-land="de"><img class="vlag" src="img/vlag/de.svg" alt="" width="24" height="16"><span class="land-naam" data-t="land_de">Duitsland</span><span class="land-meta" data-meta="22|433"></span></button></li><li><button type="button" data-land="fr"><img class="vlag" src="img/vlag/fr.svg" alt="" width="24" height="16"><span class="land-naam" data-t="land_fr">Frankrijk</span><span class="land-meta" data-meta="6|101"></span></button></li><li><button type="button" data-land="es"><img class="vlag" src="img/vlag/es.svg" alt="" width="24" height="16"><span class="land-naam" data-t="land_es">Spanje</span><span class="land-meta" data-meta="27|449"></span></button></li><li><button type="button" data-land="it"><img class="vlag" src="img/vlag/it.svg" alt="" width="24" height="16"><span class="land-naam" data-t="land_it">Italië</span><span class="land-meta" data-meta="14|241"></span></button></li><li><button type="button" data-land="dk"><img class="vlag" src="img/vlag/dk.svg" alt="" width="24" height="16"><span class="land-naam" data-t="land_dk">Denemarken</span><span class="land-meta" data-meta="4|45"></span></button></li><li class="meer"><div class="meer-vak"><span class="plus" aria-hidden="true">+</span><span class="land-naam" data-t="eu_meer">Meer op komst</span><span class="land-meta" data-t="eu_meer_meta">Nieuwe landen en competities</span></div></li></ul>
+    </div>
+    <div class="europa-kaart onthul" data-bron="img/stadionkaart.svg" style="aspect-ratio: 600 / 761"></div>
+  </div>
+</section>
+
+<section class="belofte">
+  <div class="belofte-in onthul">
+    <h2 data-t="b_kop">Eenvoudig, privé en zonder reclame</h2>
+    <dl>
+      <div><dt data-t="b1_titel">Geen advertenties of tracking</dt><dd data-t="b1_tekst">Weddies toont geen reclame en volgt je niet, in de app en daarbuiten.</dd></div>
+      <div><dt data-t="b2_titel">Geen account nodig</dt><dd data-t="b2_tekst">Zonder account werkt alles op je iPhone. Een account heb je alleen nodig voor vrienden en synchronisatie.</dd></div>
+      <div><dt data-t="b3_titel">Je logboek blijft van jou</dt><dd data-t="b3_tekst">Exporteer je logboek op elk moment als CSV, of haal je bezoeken binnen uit een andere app.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="faq" id="vragen">
+  <div class="faq-in">
+    <h2 data-t="faq_kop">Veelgestelde vragen</h2>
+    <details class="vraag onthul"><summary data-t="q1">Is Weddies gratis?</summary><p data-t="a1">Ja. De kaart, het logboek, het paspoort en twee story-stijlen zijn gratis. Voor wie meer wil, komt er een optioneel abonnement: Weddies Plus.</p></details><details class="vraag onthul"><summary data-t="q2">Welke landen en competities zitten erin?</summary><p data-t="a2">Nederland, België, Engeland, Schotland, Duitsland, Frankrijk, Spanje, Italië en Denemarken: samen 100 competities, tot ver in de lagere klassen. En er komen steeds meer landen en competities bij.</p></details><details class="vraag onthul"><summary data-t="q3">Heb ik een account nodig?</summary><p data-t="a3">Nee. Zonder account werkt alles en blijft je logboek op je iPhone. Met een vrijwillig account wordt je logboek veilig bewaard en kun je vrienden toevoegen.</p></details><details class="vraag onthul"><summary data-t="q4">Tellen wedstrijden op tv mee?</summary><p data-t="a4">Je kunt ze loggen, maar ze tellen niet mee voor je grounds, paspoort of badges. Alleen echt in het stadion zijn telt.</p></details><details class="vraag onthul"><summary data-t="q5">Wanneer komt Weddies voor Android?</summary><p data-t="a5">De Android-versie wordt verwacht in 2027.</p></details><details class="vraag onthul"><summary data-t="q6">Wat gebeurt er met mijn gegevens?</summary><p><span data-t="a6">Zonder account verzamelt Weddies niets, en de app bevat geen reclame of tracking. Lees alles in het</span> <a href="privacy" data-t="a6_link">privacybeleid</a><span data-t="a6_eind">.</span></p></details>
+  </div>
+</section>
+
+<section class="slot">
+  <div class="slot-in onthul">
+    <img class="icoon" src="img/logo.png" alt="" width="88" height="88">
+    <h2 data-t="slot_titel">Begin je eigen groundhopping-logboek</h2>
+    <div class="winkels"><a class="knop-store" role="link" aria-disabled="true" data-store>
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10.5 18.5h3"/></svg>
+      <span><small data-t="store_klein">Binnenkort in de</small><span data-t="store_groot">App Store</span></span>
+    </a><span class="knop-store knop-play" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 3.5v17l14-8.5z"/></svg><span><small data-t="play_klein">Verwacht in 2027 op</small><span>Google Play</span></span></span></div>
+    
+    <a class="beta-knop" id="beta" hidden data-t="beta_knop">Doe mee aan de bèta</a>
+    <form class="aanmelden" id="aanmelden" hidden novalidate>
+      <label class="aanmelden-kop" for="aanmeld-mail" data-t="mail_kop">Mail me bij de lancering</label>
+      <div class="aanmelden-rij">
+        <input id="aanmeld-mail" type="email" name="email" autocomplete="email" required data-t-ph="mail_ph" placeholder="je@email.nl">
+        <button type="submit" data-t="mail_knop">Aanmelden</button>
+      </div>
+      <p class="aanmelden-klein" data-t="mail_klein">Alleen voor één mail bij de lancering. Daarna wissen we je adres.</p>
+      <p class="aanmelden-melding" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="voet">
+  <div class="voet-in">
+    <div class="voet-merk">
+      <a class="merk" href="./"><img src="img/logo.png" alt="" width="34" height="34">WEDDIES</a>
+      <p data-t="v_omschrijving">Voetbalwedstrijden bij jou in de buurt en een logboek van elk stadion dat je bezoekt.</p>
+    </div>
+    <nav class="voet-kolom" aria-label="App">
+      <h3 data-t="v_app">App</h3>
+      <a href="./#functies" data-t="v_functies">Functies</a>
+      <a href="support" data-t="v_support">Support</a>
+    </nav>
+    <nav class="voet-kolom" aria-label="Legal">
+      <h3 data-t="v_juridisch">Juridisch</h3>
+      <a href="privacy" data-t="v_privacy">Privacybeleid</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" data-t="v_voorwaarden">Gebruiksvoorwaarden</a>
+    </nav>
+    <nav class="voet-kolom" aria-label="Contact">
+      <h3 data-t="v_contact">Contact</h3>
+      <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>
+      <a href="https://www.instagram.com/kit.havers/">Instagram</a>
+    </nav>
+  </div>
+  <div class="voet-onder">
+    <span>© 2026 Weddies</span>
+    <span data-t="v_merken">Clubnamen en -logo's zijn eigendom van de betreffende clubs. Apple, iPhone en App Store zijn handelsmerken van Apple Inc. Google Play is een handelsmerk van Google LLC.</span>
+  </div>
+</footer>
+
+<script>
+// Zodra Weddies in de App Store staat: zet hier de link (https://apps.apple.com/app/id…). Dan worden de knoppen klikbaar.
+var APP_STORE_URL = "";
+// Bèta: zet hier de openbare TestFlight-link (https://testflight.apple.com/join/…). Leeg = knop verborgen.
+var BETA_URL = "";
+// Mail bij lancering: Supabase-project en de publieke (publishable/anon) sleutel. Leeg = formulier verborgen.
+// Eerst de tabel aanmaken (weddies/appstore/Website - mail bij lancering.md) en het privacybeleid aanvullen.
+var AANMELD_URL = "";   // bijv. https://<project>.supabase.co
+var AANMELD_SLEUTEL = "";
+// Nederlandse en Duitse screenshots: zet de namen erin zodra img/nl-<naam>.webp / img/de-<naam>.webp er staan
+// (namen: kaart, wedstrijd, paspoort, story, mijn-club, logboek, beoordeling). Anders tonen we de Engelse.
+var SCHERMEN = { nl: [], de: [] };
+window.WEDDIES_LIGA = {"88":"nl","89":"nl","492":"nl","92":"nl","78":"de","79":"de","80":"de","83":"de","84":"de","85":"de","86":"de","87":"de","744":"de","745":"de","746":"de","747":"de","748":"de","749":"de","750":"de","751":"de","752":"de","753":"de","754":"de","755":"de","938":"de","939":"de","39":"eng","40":"eng","43":"eng","41":"eng","42":"eng","50":"eng","51":"eng","58":"eng","59":"eng","60":"eng","931":"eng","144":"be","145":"be","149":"be","150":"be","148":"be","487":"be","140":"es","141":"es","435":"es","436":"es","439":"es","440":"es","441":"es","442":"es","443":"es","444":"es","445":"es","446":"es","447":"es","448":"es","449":"es","450":"es","451":"es","452":"es","453":"es","454":"es","455":"es","456":"es","875":"es","876":"es","877":"es","878":"es","879":"es","179":"sco","180":"sco","183":"sco","184":"sco","730":"sco","731":"sco","119":"dk","120":"dk","122":"dk","862":"dk","61":"fr","62":"fr","63":"fr","67":"fr","68":"fr","69":"fr","135":"it","136":"it","138":"it","942":"it","943":"it","426":"it","427":"it","428":"it","429":"it","430":"it","431":"it","432":"it","433":"it","434":"it"};
+
+
+window.TEKSTEN = {
+  "nl": {
+    "k0_label": "Logboek",
+    "k0_titel": "Elke wedstrijd in je logboek",
+    "k0_uitleg": "Leg met één tik vast dat je erbij was. Weddies houdt automatisch je grounds, wedstrijden, landen en doelpunten bij, met je beoordeling van sfeer, eten en bier, en notities en foto's per bezoek.",
+    "alt_logboek": "Het logboek met 94 grounds, 12 wedstrijden en de laatste bezoeken",
+    "alt_beoordeling": "Een bezoek beoordelen op sfeer, eten en bier",
+    "titel": "Weddies – Voetbalwedstrijden bij jou in de buurt",
+    "omschrijving": "Weddies toont alle voetbalwedstrijden bij jou in de buurt op één kaart en houdt bij welke stadions je hebt bezocht. Binnenkort voor iPhone.",
+    "nav_functies": "Functies",
+    "nav_support": "Support",
+    "kop_store": "Binnenkort in de App Store",
+    "kop_store_live": "Download",
+    "hero_label": "Voor groundhoppers en voetbalfans",
+    "hero_titel": "Elke wedstrijd in de buurt, op één kaart.",
+    "hero_intro": "Weddies toont alle voetbalwedstrijden om je heen, van de hoogste divisie tot de lagere klassen, in negen landen. Met een persoonlijk logboek van elk stadion dat je bezoekt.",
+    "store_klein": "Binnenkort in de",
+    "store_klein_live": "Download in de",
+    "store_groot": "App Store",
+    "band_titel": "100 competities in negen landen",
+    "k1_label": "Kaart",
+    "k1_titel": "Aftrap, stand en route in één tik",
+    "k1_uitleg": "Bekijk alle wedstrijden van vandaag, morgen of later in de week. Tik op een wedstrijd voor de aftrap, de stand en de route naar het stadion. Met “Zin in voetbal?” kies je een moment en een maximale reistijd, en Weddies kiest een wedstrijd voor je.",
+    "k2_label": "Paspoort",
+    "k2_titel": "Houd elk stadion bij",
+    "k2_uitleg": "Elk bezoek komt in je paspoort: een kaart met al je grounds, badges en je voortgang per competitie, inclusief The 92. Alleen wedstrijden die je in het stadion hebt gezien tellen mee.",
+    "k3_label": "Delen",
+    "k3_titel": "Deel je bezoek als story",
+    "k3_uitleg": "Maak na afloop met één tik een story met de uitslag, het stadion en je groundnummer, en deel die direct op Instagram.",
+    "k4_label": "Mijn club",
+    "k4_titel": "Je eigen club altijd in beeld",
+    "k4_uitleg": "De volgende wedstrijd, het programma en de uitwedstrijden van je club en van de clubs die je volgt, in één overzicht.",
+    "b1_titel": "Geen advertenties of tracking",
+    "b1_tekst": "Weddies toont geen reclame en volgt je niet, in de app en daarbuiten.",
+    "b2_titel": "Geen account nodig",
+    "b2_tekst": "Zonder account werkt alles op je iPhone. Een account heb je alleen nodig voor vrienden en synchronisatie.",
+    "b3_titel": "Je logboek blijft van jou",
+    "b3_tekst": "Exporteer je logboek op elk moment als CSV, of haal je bezoeken binnen uit een andere app.",
+    "slot_titel": "Begin je eigen groundhopping-logboek",
+    "alt_kaart": "De kaart van Weddies met wedstrijden in Londen",
+    "alt_wedstrijd": "Een wedstrijdkaartje boven het stadion in 3D",
+    "alt_paspoort": "Het paspoort met 94 bezochte grounds op de kaart van Europa",
+    "alt_story": "Een story van een wedstrijd op Stamford Bridge",
+    "alt_club": "Het scherm Mijn club met de volgende wedstrijd",
+    "b_kop": "Eenvoudig, privé en zonder reclame",
+    "play_klein": "Verwacht in 2027 op",
+    "op_label": "Het elftal",
+    "op_kop": "Elf functies, één team",
+    "op_hint": "Tik op een speler voor uitleg.",
+    "eu_label": "Op de kaart",
+    "eu_kop": "1.832 stadions in negen landen",
+    "eu_tekst": "Elke stip is een stadion in Weddies, van de Premier League tot de Highland League. En dit is pas het begin: er komen nog meer landen en competities bij.",
+    "eu_meta": "{c} competities · {s} stadions",
+    "faq_kop": "Veelgestelde vragen",
+    "q1": "Is Weddies gratis?",
+    "a1": "Ja. De kaart, het logboek, het paspoort en twee story-stijlen zijn gratis. Voor wie meer wil, komt er een optioneel abonnement: Weddies Plus.",
+    "q2": "Welke landen en competities zitten erin?",
+    "a2": "Nederland, België, Engeland, Schotland, Duitsland, Frankrijk, Spanje, Italië en Denemarken: samen 100 competities, tot ver in de lagere klassen. En er komen steeds meer landen en competities bij.",
+    "q3": "Heb ik een account nodig?",
+    "a3": "Nee. Zonder account werkt alles en blijft je logboek op je iPhone. Met een vrijwillig account wordt je logboek veilig bewaard en kun je vrienden toevoegen.",
+    "q4": "Tellen wedstrijden op tv mee?",
+    "a4": "Je kunt ze loggen, maar ze tellen niet mee voor je grounds, paspoort of badges. Alleen echt in het stadion zijn telt.",
+    "q5": "Wanneer komt Weddies voor Android?",
+    "a5": "De Android-versie wordt verwacht in 2027.",
+    "q6": "Wat gebeurt er met mijn gegevens?",
+    "a6": "Zonder account verzamelt Weddies niets, en de app bevat geen reclame of tracking. Lees alles in het",
+    "a6_link": "privacybeleid",
+    "a6_eind": ".",
+    "beta_knop": "Doe mee aan de bèta",
+    "mail_kop": "Mail me bij de lancering",
+    "mail_ph": "je@email.nl",
+    "mail_knop": "Aanmelden",
+    "mail_klein": "Alleen voor één mail bij de lancering. Daarna wissen we je adres.",
+    "mail_bedankt": "Top! Je hoort van ons zodra Weddies er is.",
+    "mail_fout": "Dat ging mis. Probeer het later nog eens.",
+    "mail_ongeldig": "Vul een geldig e-mailadres in.",
+    "band_vandaag": "Vandaag {n} wedstrijden in {k} {landen}",
+    "band_land1": "land",
+    "band_landen": "landen",
+    "band_live": "LIVE",
+    "sp1_naam": "Logboek",
+    "sp1_tekst": "Elk bezoek veilig bewaard, met je beoordeling, notities en foto’s. Exporteer het als CSV wanneer je wilt.",
+    "sp2_naam": "Paspoort",
+    "sp2_tekst": "Een kaart met al je grounds en je voortgang per competitie.",
+    "sp3_naam": "Vrienden",
+    "sp3_tekst": "Voeg vrienden toe en zie elkaars grounds, badges en wie waar bij is. Alleen als de ander je verzoek accepteert.",
+    "sp4_naam": "Badges",
+    "sp4_tekst": "Verdien badges voor je eerste ground, nieuwe landen en andere mijlpalen.",
+    "sp5_naam": "The 92",
+    "sp5_tekst": "Vink alle 92 grounds van de Premier League en de Football League af.",
+    "sp6_naam": "Spelers",
+    "sp6_tekst": "Tik op een speler en zie hoe vaak je hem live zag spelen.",
+    "sp7_naam": "Zin in voetbal?",
+    "sp7_tekst": "Kies wanneer en hoe ver, en Weddies loot een wedstrijd voor je. Of schud gewoon je telefoon.",
+    "sp8_naam": "Wedstrijdinfo",
+    "sp8_tekst": "Opstellingen, doelpunten, kaarten en statistieken van elke wedstrijd, waar beschikbaar.",
+    "sp9_naam": "Kaart",
+    "sp9_tekst": "Alle wedstrijden van vandaag tot volgende week op één kaart, met de route naar het stadion.",
+    "sp10_naam": "Mijn club",
+    "sp10_tekst": "De volgende wedstrijd, het programma en je uitvakteller.",
+    "sp11_naam": "Story",
+    "sp11_tekst": "Deel je bezoek als story, in de stijl Floodlight of Ticket.",
+    "land_nl": "Nederland",
+    "land_be": "België",
+    "land_eng": "Engeland",
+    "land_sco": "Schotland",
+    "land_de": "Duitsland",
+    "land_fr": "Frankrijk",
+    "land_es": "Spanje",
+    "land_it": "Italië",
+    "land_dk": "Denemarken",
+    "band_morgen": "Morgen {n} wedstrijden in {k} {landen}",
+    "eu_meer": "Meer op komst",
+    "eu_meer_meta": "Nieuwe landen en competities"
+  },
+  "en": {
+    "k0_label": "Logbook",
+    "k0_titel": "Every match you’ve been to, logged",
+    "k0_uitleg": "One tap and it’s in your logbook. Weddies keeps count of your grounds, matches, countries and goals, and lets you rate the atmosphere, food and beer, with notes and photos for every visit.",
+    "alt_logboek": "The logbook with 94 grounds, 12 matches and the latest visits",
+    "alt_beoordeling": "Rating a visit on atmosphere, food and beer",
+    "titel": "Weddies – Football matches near you",
+    "omschrijving": "Weddies shows every football match near you on one map and keeps track of the grounds you have visited. Coming soon to iPhone.",
+    "nav_functies": "Features",
+    "nav_support": "Support",
+    "kop_store": "Coming soon to the App Store",
+    "kop_store_live": "Download",
+    "hero_label": "Built for groundhoppers and matchgoers",
+    "hero_titel": "All the football near you, on one map.",
+    "hero_intro": "From the top flight down to the lower leagues, Weddies puts every match around you on the map across nine countries, and keeps a log of every ground you visit.",
+    "store_klein": "Coming soon on the",
+    "store_klein_live": "Download on the",
+    "store_groot": "App Store",
+    "band_titel": "100 leagues across nine countries",
+    "k1_label": "Map",
+    "k1_titel": "Kick-off, score and directions, one tap away",
+    "k1_uitleg": "Browse every match today, tomorrow or later in the week. Tap one for the kick-off time, the live score and directions to the ground. Can’t decide? “Fancy a match?” picks one for you, based on when you’re free and how far you’re willing to travel.",
+    "k2_label": "Passport",
+    "k2_titel": "Tick off every ground",
+    "k2_uitleg": "Every visit lands in your passport: a map of your grounds, badges and your progress through each league, The 92 included. Only matches you saw in person count.",
+    "k3_label": "Share",
+    "k3_titel": "Made for your Instagram story",
+    "k3_uitleg": "After full time, turn your visit into a story with the score, the ground and your ground number, ready to share in one tap.",
+    "k4_label": "My club",
+    "k4_titel": "Never miss a game",
+    "k4_uitleg": "Your club’s next match, upcoming fixtures and away days at a glance, along with every other club you follow.",
+    "b1_titel": "No ads, no tracking",
+    "b1_tekst": "No adverts in the app, and nothing following you around outside it.",
+    "b2_titel": "No account required",
+    "b2_tekst": "Everything works on your iPhone without one. You only need an account for friends and syncing.",
+    "b3_titel": "Your logbook, your data",
+    "b3_tekst": "Export your logbook as a CSV whenever you like, or bring your visits over from another app.",
+    "slot_titel": "Start your groundhopping log",
+    "alt_kaart": "The Weddies map with matches in London",
+    "alt_wedstrijd": "A match card above the stadium in 3D",
+    "alt_paspoort": "The passport with 94 visited grounds on the map of Europe",
+    "alt_story": "A story of a match at Stamford Bridge",
+    "alt_club": "The My club screen with the next match",
+    "b_kop": "Simple, private and ad-free",
+    "play_klein": "Coming in 2027 to",
+    "op_label": "The line-up",
+    "op_kop": "Eleven features, one team",
+    "op_hint": "Tap a player to find out more.",
+    "eu_label": "On the map",
+    "eu_kop": "1,832 grounds across nine countries",
+    "eu_tekst": "Every dot is a ground in Weddies, from the Premier League to the Highland League. And this is just the start: more countries and leagues are on the way.",
+    "eu_meta": "{c} leagues · {s} grounds",
+    "faq_kop": "Frequently asked questions",
+    "q1": "Is Weddies free?",
+    "a1": "Yes. The map, the logbook, the passport and two story styles are free. For those who want more, there will be an optional subscription: Weddies Plus.",
+    "q2": "Which countries and leagues are included?",
+    "a2": "The Netherlands, Belgium, England, Scotland, Germany, France, Spain, Italy and Denmark: 100 leagues in total, well down into the lower divisions. And more countries and leagues are on the way.",
+    "q3": "Do I need an account?",
+    "a3": "No. Everything works without one, and your logbook stays on your iPhone. With an optional account, your logbook is backed up and you can add friends.",
+    "q4": "Do matches on TV count?",
+    "a4": "You can log them, but they don’t count towards your grounds, passport or badges. Only being there in person counts.",
+    "q5": "When is Weddies coming to Android?",
+    "a5": "The Android version is expected in 2027.",
+    "q6": "What happens to my data?",
+    "a6": "Without an account Weddies collects nothing, and the app has no ads or tracking. Read the details in the",
+    "a6_link": "privacy policy",
+    "a6_eind": ".",
+    "beta_knop": "Join the beta",
+    "mail_kop": "Email me at launch",
+    "mail_ph": "you@email.com",
+    "mail_knop": "Notify me",
+    "mail_klein": "Just one email at launch, then we delete your address.",
+    "mail_bedankt": "Great! We’ll let you know as soon as Weddies is out.",
+    "mail_fout": "Something went wrong. Please try again later.",
+    "mail_ongeldig": "Please enter a valid email address.",
+    "band_vandaag": "{n} matches today across {k} {landen}",
+    "band_land1": "country",
+    "band_landen": "countries",
+    "band_live": "LIVE",
+    "sp1_naam": "Logbook",
+    "sp1_tekst": "Every visit kept safe, with your ratings, notes and photos. Export it as a CSV whenever you like.",
+    "sp2_naam": "Passport",
+    "sp2_tekst": "A map of all your grounds and your progress through each league.",
+    "sp3_naam": "Friends",
+    "sp3_tekst": "Add friends and see each other’s grounds, badges and who’s going where. Only once they accept your request.",
+    "sp4_naam": "Badges",
+    "sp4_tekst": "Earn badges for your first ground, new countries and other milestones.",
+    "sp5_naam": "The 92",
+    "sp5_tekst": "Tick off all 92 grounds of the Premier League and the Football League.",
+    "sp6_naam": "Players",
+    "sp6_tekst": "Tap a player to see how often you’ve watched them live.",
+    "sp7_naam": "Fancy a match?",
+    "sp7_tekst": "Pick when and how far, and Weddies draws a match for you. Or just shake your phone.",
+    "sp8_naam": "Match centre",
+    "sp8_tekst": "Line-ups, goals, cards and stats for every match, where available.",
+    "sp9_naam": "Map",
+    "sp9_tekst": "Every match from today to next week on one map, with directions to the ground.",
+    "sp10_naam": "My club",
+    "sp10_tekst": "Your club’s next match, fixtures and away-day count.",
+    "sp11_naam": "Story",
+    "sp11_tekst": "Share your visit as a story in Floodlight or Ticket style.",
+    "land_nl": "Netherlands",
+    "land_be": "Belgium",
+    "land_eng": "England",
+    "land_sco": "Scotland",
+    "land_de": "Germany",
+    "land_fr": "France",
+    "land_es": "Spain",
+    "land_it": "Italy",
+    "land_dk": "Denmark",
+    "band_morgen": "{n} matches tomorrow across {k} {landen}",
+    "eu_meer": "More on the way",
+    "eu_meer_meta": "New countries and leagues"
+  },
+  "de": {
+    "k0_label": "Logbuch",
+    "k0_titel": "Jedes Spiel in deinem Logbuch",
+    "k0_uitleg": "Mit einem Tipp hältst du fest, dass du dabei warst. Weddies zählt automatisch deine Grounds, Spiele, Länder und Tore, mit deiner Bewertung von Stimmung, Essen und Bier sowie Notizen und Fotos zu jedem Besuch.",
+    "alt_logboek": "Das Logbuch mit 94 Grounds, 12 Spielen und den letzten Besuchen",
+    "alt_beoordeling": "Einen Besuch nach Stimmung, Essen und Bier bewerten",
+    "titel": "Weddies – Fußballspiele in deiner Nähe",
+    "omschrijving": "Weddies zeigt alle Fußballspiele in deiner Nähe auf einer Karte und hält fest, welche Stadien du besucht hast. Demnächst für iPhone.",
+    "nav_functies": "Funktionen",
+    "nav_support": "Support",
+    "kop_store": "Demnächst im App Store",
+    "kop_store_live": "Laden",
+    "hero_label": "Für Groundhopper und Fußballfans",
+    "hero_titel": "Jedes Spiel in deiner Nähe, auf einer Karte.",
+    "hero_intro": "Weddies zeigt alle Fußballspiele um dich herum, von der höchsten Liga bis zu den unteren Klassen, in neun Ländern. Mit einem persönlichen Logbuch für jedes Stadion, das du besuchst.",
+    "store_klein": "Demnächst im",
+    "store_klein_live": "Laden im",
+    "store_groot": "App Store",
+    "band_titel": "100 Ligen in neun Ländern",
+    "k1_label": "Karte",
+    "k1_titel": "Anstoß, Spielstand und Route mit einem Tipp",
+    "k1_uitleg": "Sieh alle Spiele von heute, morgen oder später in der Woche. Tippe auf ein Spiel für Anstoßzeit, Spielstand und die Route zum Stadion. Bei „Lust auf Fußball?“ wählst du einen Zeitraum und eine maximale Reisezeit, und Weddies sucht ein Spiel für dich aus.",
+    "k2_label": "Pass",
+    "k2_titel": "Halte jedes Stadion fest",
+    "k2_uitleg": "Jeder Besuch kommt in deinen Pass: eine Karte all deiner Grounds, Badges und dein Fortschritt pro Liga, einschließlich The 92. Es zählen nur Spiele, die du im Stadion gesehen hast.",
+    "k3_label": "Teilen",
+    "k3_titel": "Teile deinen Besuch als Story",
+    "k3_uitleg": "Erstelle nach dem Spiel mit einem Tipp eine Story mit Ergebnis, Stadion und deiner Ground-Nummer und teile sie direkt auf Instagram.",
+    "k4_label": "Mein Verein",
+    "k4_titel": "Dein Verein immer im Blick",
+    "k4_uitleg": "Nächstes Spiel, Spielplan und Auswärtsspiele deines Vereins und der Vereine, denen du folgst, in einer Übersicht.",
+    "b1_titel": "Keine Werbung, kein Tracking",
+    "b1_tekst": "Keine Anzeigen in der App und niemand, der dich außerhalb verfolgt.",
+    "b2_titel": "Kein Account nötig",
+    "b2_tekst": "Ohne Account funktioniert alles auf deinem iPhone. Einen Account brauchst du nur für Freunde und die Synchronisierung.",
+    "b3_titel": "Dein Logbuch, deine Daten",
+    "b3_tekst": "Exportiere dein Logbuch jederzeit als CSV oder übernimm deine Besuche aus einer anderen App.",
+    "slot_titel": "Starte dein eigenes Groundhopping-Logbuch",
+    "alt_kaart": "Die Weddies-Karte mit Spielen in London",
+    "alt_wedstrijd": "Eine Spielkarte über dem Stadion in 3D",
+    "alt_paspoort": "Der Pass mit 94 besuchten Grounds auf der Europakarte",
+    "alt_story": "Eine Story von einem Spiel an der Stamford Bridge",
+    "alt_club": "Der Bildschirm Mein Verein mit dem nächsten Spiel",
+    "b_kop": "Einfach, privat und werbefrei",
+    "play_klein": "Erscheint 2027 bei",
+    "op_label": "Die Aufstellung",
+    "op_kop": "Elf Funktionen, ein Team",
+    "op_hint": "Tippe auf einen Spieler für mehr Infos.",
+    "eu_label": "Auf der Karte",
+    "eu_kop": "1.832 Stadien in neun Ländern",
+    "eu_tekst": "Jeder Punkt ist ein Stadion in Weddies, von der Premier League bis zur Highland League. Und das ist erst der Anfang: Weitere Länder und Ligen kommen dazu.",
+    "eu_meta": "{c} Ligen · {s} Stadien",
+    "faq_kop": "Häufige Fragen",
+    "q1": "Ist Weddies kostenlos?",
+    "a1": "Ja. Karte, Logbuch, Pass und zwei Story-Stile sind kostenlos. Wer mehr möchte, kann künftig das optionale Abo Weddies Plus nutzen.",
+    "q2": "Welche Länder und Ligen sind dabei?",
+    "a2": "Niederlande, Belgien, England, Schottland, Deutschland, Frankreich, Spanien, Italien und Dänemark: insgesamt 100 Ligen, bis weit in die unteren Klassen. Und es kommen laufend weitere Länder und Ligen dazu.",
+    "q3": "Brauche ich einen Account?",
+    "a3": "Nein. Ohne Account funktioniert alles und dein Logbuch bleibt auf deinem iPhone. Mit einem freiwilligen Account wird dein Logbuch gesichert und du kannst Freunde hinzufügen.",
+    "q4": "Zählen Spiele im Fernsehen?",
+    "a4": "Du kannst sie eintragen, aber sie zählen nicht für Grounds, Pass oder Badges. Nur wer im Stadion war, zählt.",
+    "q5": "Wann kommt Weddies für Android?",
+    "a5": "Die Android-Version wird 2027 erwartet.",
+    "q6": "Was passiert mit meinen Daten?",
+    "a6": "Ohne Account erhebt Weddies keine Daten, und die App enthält weder Werbung noch Tracking. Alles Weitere steht in der",
+    "a6_link": "Datenschutzerklärung",
+    "a6_eind": ".",
+    "beta_knop": "Bei der Beta mitmachen",
+    "mail_kop": "Benachrichtige mich zum Start",
+    "mail_ph": "du@email.de",
+    "mail_knop": "Benachrichtigen",
+    "mail_klein": "Nur eine E-Mail zum Start, danach löschen wir deine Adresse.",
+    "mail_bedankt": "Super! Wir melden uns, sobald Weddies da ist.",
+    "mail_fout": "Das hat nicht geklappt. Bitte versuch es später noch einmal.",
+    "mail_ongeldig": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "band_vandaag": "Heute {n} Spiele in {k} {landen}",
+    "band_land1": "Land",
+    "band_landen": "Ländern",
+    "band_live": "LIVE",
+    "sp1_naam": "Logbuch",
+    "sp1_tekst": "Jeder Besuch sicher gespeichert, mit Bewertung, Notizen und Fotos. Jederzeit als CSV exportierbar.",
+    "sp2_naam": "Pass",
+    "sp2_tekst": "Eine Karte all deiner Grounds und dein Fortschritt pro Liga.",
+    "sp3_naam": "Freunde",
+    "sp3_tekst": "Füge Freunde hinzu und seht eure Grounds, Badges und wer wo dabei ist. Nur wenn die andere Person zustimmt.",
+    "sp4_naam": "Badges",
+    "sp4_tekst": "Sammle Badges für deinen ersten Ground, neue Länder und weitere Meilensteine.",
+    "sp5_naam": "The 92",
+    "sp5_tekst": "Hake alle 92 Grounds der Premier League und der Football League ab.",
+    "sp6_naam": "Spieler",
+    "sp6_tekst": "Tippe auf einen Spieler und sieh, wie oft du ihn live gesehen hast.",
+    "sp7_naam": "Lust auf Fußball?",
+    "sp7_tekst": "Wähle wann und wie weit, und Weddies lost ein Spiel für dich aus. Oder schüttle einfach dein Handy.",
+    "sp8_naam": "Spielinfos",
+    "sp8_tekst": "Aufstellungen, Tore, Karten und Statistiken zu jedem Spiel, sofern verfügbar.",
+    "sp9_naam": "Karte",
+    "sp9_tekst": "Alle Spiele von heute bis nächste Woche auf einer Karte, mit Route zum Stadion.",
+    "sp10_naam": "Mein Verein",
+    "sp10_tekst": "Nächstes Spiel, Spielplan und dein Auswärtszähler.",
+    "sp11_naam": "Story",
+    "sp11_tekst": "Teile deinen Besuch als Story im Stil Floodlight oder Ticket.",
+    "land_nl": "Niederlande",
+    "land_be": "Belgien",
+    "land_eng": "England",
+    "land_sco": "Schottland",
+    "land_de": "Deutschland",
+    "land_fr": "Frankreich",
+    "land_es": "Spanien",
+    "land_it": "Italien",
+    "land_dk": "Dänemark",
+    "band_morgen": "Morgen {n} Spiele in {k} {landen}",
+    "eu_meer": "Weitere folgen",
+    "eu_meer_meta": "Neue Länder und Ligen"
+  }
+};
+
+// App Store-knoppen: klikbaar zodra APP_STORE_URL is ingevuld
+document.addEventListener("taal", function (e) {
+  if (!APP_STORE_URL) return;
+  var t = window.TEKSTEN[e.detail];
+  document.querySelectorAll("[data-store], [data-store-kop]").forEach(function (a) {
+    a.href = APP_STORE_URL;
+    a.removeAttribute("aria-disabled");
+    a.removeAttribute("role");
+  });
+  document.querySelectorAll('[data-store] [data-t="store_klein"]').forEach(function (k) { k.textContent = t.store_klein_live; });
+  document.querySelectorAll("[data-store-kop]").forEach(function (k) { k.textContent = t.kop_store_live; });
+});
+</script>
+<script src="extra.js?v=12"></script>
+<script src="taal.js?v=11"></script>
+<script src="beweging.js?v=11"></script>
+<script src="live.js?v=15"></script>
+</body>
+</html>
