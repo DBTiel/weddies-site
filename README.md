@@ -2,7 +2,8 @@
 
 De website van Weddies: een voorpagina (NL/EN/DE) met de privacy-, support- en uitnodigingspagina. Gewone HTML, CSS en
 een klein scriptje voor de taal (`taal.js`), zonder bouwstap. GitHub Pages zet de `main`-branch online op
-https://weddiesapp.com (`CNAME`).
+https://dbtiel.github.io/weddies-site/. Komt het domein weddiesapp.com erbij: bestand `CNAME` met `weddiesapp.com`
+terugzetten en bij Pages het eigen domein invullen.
 
 - `index.html` voorpagina. Zodra de app in de App Store staat: vul `APP_STORE_URL` in, dan wordt de knop klikbaar.
 - `privacy.html`, `support.html` drie talen; bij verschil geldt de Nederlandse tekst.

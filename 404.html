@@ -6,10 +6,12 @@
 <meta name="robots" content="noindex">
 <title>Weddies – Pagina niet gevonden</title>
 <meta name="theme-color" content="#012417">
-<link rel="icon" type="image/png" href="/img/favicon-64.png">
-<!-- 404 voor elk adres dat niet bestaat: daarom overal absolute paden (/style.css, /img/…) -->
+<link rel="icon" type="image/png" href="img/favicon-64.png">
+<!-- 404 voor elk adres dat niet bestaat. Paden gaan via <base>: op weddiesapp.com is dat "/", zolang de site
+     op github.io staat "/weddies-site/". -->
+<script>document.write('<base href="' + (location.hostname.slice(-10) === "github.io" ? "/weddies-site/" : "/") + '">');</script>
 <script>document.documentElement.classList.add("js");</script>
-<link rel="stylesheet" href="/style.css?v=14">
+<link rel="stylesheet" href="style.css?v=14">
 <style>
 .fout { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 96px 16px 64px; }
 .fout .merk { position: absolute; top: 18px; left: 50%; transform: translateX(-50%); }
@@ -46,7 +48,7 @@
 <div class="kaartlaag" aria-hidden="true"><div class="kaartlaag-in"><span class="pin p0" style="left:12%;top:18%"></span><span class="pin p1" style="left:78%;top:12%"></span><span class="pin p2" style="left:88%;top:46%"></span><span class="pin p3" style="left:8%;top:62%"></span><span class="pin p0" style="left:64%;top:74%"></span><span class="pin p1" style="left:35%;top:40%"></span><span class="pin p2" style="left:52%;top:22%"></span><span class="pin p3" style="left:24%;top:88%"></span></div></div>
 
 <main class="fout">
-  <a class="merk" href="/"><img src="/img/logo.png" alt="" width="34" height="34">WEDDIES</a>
+  <a class="merk" href="./"><img src="img/logo.png" alt="" width="34" height="34">WEDDIES</a>
   <div class="kaartvlak" aria-hidden="true">
     <div class="gloed"></div>
     <svg class="fluitlijnen" viewBox="0 0 220 240"><path d="M34 70l-20-12"/><path d="M28 104H4"/><path d="M186 70l20-12"/><path d="M192 104h24"/></svg>
@@ -55,7 +57,7 @@
   <p class="fout-code">404</p>
   <h1 id="kop">Rode kaart voor deze link</h1>
   <p class="uitleg" id="tekst">Deze pagina bestaat niet of is verplaatst. Geen zorgen: op de voorpagina gaat het spel gewoon door.</p>
-  <a class="knop-store" href="/" id="terug">
+  <a class="knop-store" href="./" id="terug">
     <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
     <span id="knop">Terug naar het veld</span>
   </a>
