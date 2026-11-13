@@ -77,6 +77,22 @@
     bal.addEventListener("animationend", function (e) { if (e.animationName === "trap") bal.classList.remove("trap"); });
   }
 
+  // Tekstpagina's: de lijn loopt mee met de hele pagina (leeg bovenaan, af onderaan). De bal blijft dan precies op
+  // dezelfde hoogte in beeld als de ruimte onder het veld (marge + voettekst) even hoog is als het scherm min de
+  // bovenkant van het veld. Anders liep de bal langzaam omhoog uit beeld, vooral op de telefoon.
+  var veldTop = 234;
+  function ruimteOnder() {
+    var tp = document.querySelector(".tekstpagina"), voet = document.querySelector(".voet");
+    if (!subpagina || !tp || !voet) return;
+    var boven = tp.getBoundingClientRect().top + window.scrollY;
+    veldTop = Math.round(boven);
+    document.documentElement.style.setProperty("--veldtop", veldTop + "px");
+    tp.style.marginBottom = Math.max(40, Math.round(window.innerHeight - boven - voet.offsetHeight)) + "px";
+  }
+  ruimteOnder();
+  window.addEventListener("resize", ruimteOnder, { passive: true });
+  window.addEventListener("load", ruimteOnder);
+
   if (kop) {
     var bezig = false;
     var zet = function () {
@@ -89,11 +105,12 @@
         var r = veld.getBoundingClientRect();
         var h = lijn.parentNode.offsetHeight;
         var p = Math.min(1, Math.max(0, (window.innerHeight * 0.5 - r.top) / h));
-        if (document.body.classList.contains("subpagina")) {
-          p = Math.min(1, Math.max(0, window.scrollY / Math.max(1, document.documentElement.scrollHeight - window.innerHeight)));
-        }
+        if (subpagina) p = Math.min(1, Math.max(0, (veldTop - r.top) / h));
         for (var k = 0; k < lijnen.length; k++) lijnen[k].style.transform = "scaleY(" + p.toFixed(4) + ")";
-        if (bal) { bal.style.top = (p * 100).toFixed(3) + "%"; bal.style.rotate = (p * 2880).toFixed(0) + "deg"; }
+        if (bal) {
+          bal.parentNode.style.transform = "translate3d(0," + (p * 100).toFixed(3) + "%,0)";
+          bal.style.transform = "rotate(" + (p * 2880).toFixed(0) + "deg)";
+        }
       }
       zetKlok();
       kijkGoal();

@@ -262,9 +262,16 @@ h2 { font-size: clamp(30px, 3.8vw, 46px); line-height: 1.08; letter-spacing: -.0
 .zijlijn { position: absolute; top: 0; bottom: 0; width: 2px; background: rgba(249, 245, 235, .1); }
 .zijlijn.links { left: var(--rand-veld); } .zijlijn.rechts { right: var(--rand-veld); }
 .zijlijn-lijn { position: absolute; inset: 0; background: rgba(249, 245, 235, .6); transform-origin: top; transform: scaleY(0); will-change: transform; }
+/* De bal hangt in een houder zo hoog als de zijlijn. De houder schuift met transform (translateY 0 → 100%),
+   en de bal draait met transform: allebei door de grafische chip, dus ook bij snel scrollen strak.
+   Eerst bewoog de bal met 'top'; dat moest elk beeldje opnieuw worden opgemaakt en haperde bij snel scrollen. */
+/* De houder zit in een 'baan' met overflow: clip. Zonder die baan telde de verschoven houder mee als inhoud van de
+   pagina: de pagina werd langer naarmate je scrolde, en de scroll-animatie liep zichzelf achterna (bal liep uit beeld). */
+.balbaan { position: absolute; top: -30px; bottom: -30px; left: -40px; right: -200px; overflow: clip; pointer-events: none; }
+.balhouder { position: absolute; left: 41px; top: 30px; width: 0; height: calc(100% - 60px); pointer-events: none; will-change: transform; }
 .bal {
-  position: absolute; left: 50%; top: 0; width: 22px; height: 22px; margin: -11px 0 0 -11px;
-  border-radius: 50%; box-shadow: 0 4px 10px rgba(0, 0, 0, .4);
+  position: absolute; left: -11px; top: -11px; width: 22px; height: 22px;
+  border-radius: 50%; box-shadow: 0 4px 10px rgba(0, 0, 0, .4); will-change: transform;
 }
 .bal svg { width: 100%; height: 100%; display: block; }
 .lijntje { fill: none; stroke: rgba(249, 245, 235, .6); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -304,7 +311,7 @@ h2 { font-size: clamp(30px, 3.8vw, 46px); line-height: 1.08; letter-spacing: -.0
 .js .veldvlak .onthul.zichtbaar .doellijn, .js .veldvlak .onthul.zichtbaar .lijn { transform: none; transition: transform 1s cubic-bezier(.4, 0, .2, 1); }
 @media (prefers-reduced-motion: reduce) {
   .zijlijn-lijn { transform: none; }
-  .bal { display: none; }
+  .balhouder { display: none; }
   .js .veldvlak .onthul .lijntje { stroke-dashoffset: 0; }
   .js .veldvlak .onthul .stip { opacity: 1; }
   .js .veldvlak .onthul .doellijn, .js .veldvlak .onthul .lijn { transform: none; }
@@ -448,18 +455,22 @@ h2 { font-size: clamp(30px, 3.8vw, 46px); line-height: 1.08; letter-spacing: -.0
       animation: lijnteken linear both; animation-timeline: --veld;
       animation-range: cover 50vh cover calc(100% - 50vh);
     }
-    .bal {
+    .balhouder, .bal {
       animation: balrol linear both; animation-timeline: --veld;
       animation-range: cover 50vh cover calc(100% - 50vh);
     }
-    /* Op de tekstpagina's begint het veld vlak onder de kop: daar loopt de lijn mee met de hele pagina,
-       leeg bovenaan (bal op de doellijn, als bij de aftrap) en af als je onderaan bent */
-    .subpagina .zijlijn-lijn, .subpagina .bal { animation-timeline: scroll(root block); animation-range: normal; }
+    .bal { animation-name: baldraai; }
+    /* Op de tekstpagina's begint het veld vlak onder de kop. Daar staat de bal steeds op de hoogte waar het veld
+       begint (--veldtop, gezet door beweging.js): leeg bovenaan, af als de onderkant van het veld daar aankomt. */
+    .subpagina .zijlijn-lijn, .subpagina .balhouder, .subpagina .bal {
+      animation-range: cover calc(100vh - var(--veldtop, 234px)) cover calc(100% - var(--veldtop, 234px));
+    }
   }
 }
 @keyframes kaartschuif { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(0, -600px, 0); } }
 @keyframes lijnteken { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-@keyframes balrol { from { top: 0%; rotate: 0deg; } to { top: 100%; rotate: 2880deg; } }
+@keyframes balrol { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(0, 100%, 0); } }
+@keyframes baldraai { from { transform: rotate(0deg); } to { transform: rotate(2880deg); } }
 
 /* ================= Extra's ================= */
 
