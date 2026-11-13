@@ -10,7 +10,7 @@
 <link rel="icon" type="image/png" href="img/favicon-64.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <script>document.documentElement.classList.add("js");</script>
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=16">
 </head>
 <body class="voorpagina subpagina">
 <div class="kaartlaag" aria-hidden="true"><div class="kaartlaag-in"><span class="pin p0" style="left:12%;top:18%"></span><span class="pin p1" style="left:78%;top:12%"></span><span class="pin p2" style="left:88%;top:46%"></span><span class="pin p3" style="left:8%;top:62%"></span><span class="pin p0" style="left:64%;top:74%"></span><span class="pin p1" style="left:35%;top:40%"></span><span class="pin p2" style="left:52%;top:22%"></span><span class="pin p3" style="left:24%;top:88%"></span></div></div>
@@ -34,7 +34,7 @@
 </header>
 <section class="paginakop">
   <h1 data-t="kop">Privacybeleid</h1>
-  <p class="bijgewerkt" data-t="bijgewerkt">Laatst bijgewerkt: 29-10-2026</p>
+  <p class="bijgewerkt" data-t="bijgewerkt">Laatst bijgewerkt: 4 november 2026</p>
 </section>
 
 <main class="tekstpagina">
@@ -42,103 +42,512 @@
 
 <!-- ============================ NEDERLANDS (geldende tekst) ============================ -->
 <div class="kaart aan" data-lang="nl">
-<p>Weddies is een app van Jasper Havers waarmee je ziet welke voetbalwedstrijden er bij jou in de buurt zijn en je stadionbezoeken bijhoudt. Weddies verzamelt geen persoonsgegevens, tenzij je zelf een account maakt. Hieronder staat precies wat er gebeurt.</p>
-<h2>Je locatie</h2>
-<ul><li>Weddies gebruikt je locatie alleen als je daar toestemming voor geeft, en alleen terwijl je de app gebruikt.</li><li>Je locatie wordt gebruikt om wedstrijden in de buurt te tonen, afstanden te berekenen en (bij "Ik heb zin in voetbal") de reistijd op te vragen.</li><li>Weddies bewaart je locatie niet en stuurt hem niet naar de maker van de app. Voor de reistijd vraagt de app een route op bij Apple Kaarten; daarvoor geldt het privacybeleid van Apple.</li></ul>
-<h2>Je logboek, beoordelingen en foto's</h2>
-<ul><li>Zonder account worden je stadionbezoeken, beoordelingen, prijzen, notities en foto's alleen op je eigen iPhone bewaard.</li><li>Ze gaan mee in de gewone iCloud-back-up van je iPhone, als je die aan hebt staan. De maker van Weddies kan er niet bij.</li><li>Foto's kies je zelf met de fotokiezer van iOS; Weddies ziet alleen de foto's die je kiest. De camera wordt alleen gebruikt als je zelf een foto maakt.</li><li>Een story deel je zelf via de deelknop van iOS (bijvoorbeeld naar Instagram). Weddies stuurt niets automatisch.</li></ul>
-<h2>Account (alleen als je dat kiest)</h2>
-<ul><li>Een account is helemaal vrijwillig. Zonder account werkt Weddies precies hetzelfde; je logboek staat dan alleen op je telefoon.</li><li>Je logt in met Apple of met een code die je per e-mail krijgt. Er is geen wachtwoord. Weddies bewaart dan je e-mailadres (of het doorstuuradres van Apple als je "Verberg mijn e-mail" kiest), je naam als Apple die meegeeft, en met welke manieren je kunt inloggen.</li><li>Met een account wordt je logboek bewaard in de database van Weddies bij Supabase, in de EU (Frankfurt): je bezoeken, beoordelingen, prijzen, notities, het aantal biertjes, afgevinkte grounds, eigen wedstrijden, eigen clubs en stadions, en de instellingen "mijn club(s)", de telregel en "bier-rating verbergen". Je foto's gaan niet mee; die blijven op je telefoon.</li><li>Dat gebeurt alleen om je logboek veilig te bewaren en op je andere telefoons te tonen (bijvoorbeeld na het overstappen naar een nieuwe telefoon). Niet voor reclame, en het wordt met niemand gedeeld of verkocht.</li><li>Alleen jij kunt je gegevens lezen en wijzigen; dat is in de database afgedwongen. De maker kan er als beheerder bij, maar kijkt alleen als jij daarom vraagt (bijvoorbeeld bij een probleem).</li><li>Je e-mailadres wordt alleen gebruikt om je de inlogcode te sturen. Die mail verstuurt Supabase via de e-maildienst Resend. Geen nieuwsbrieven, geen spam.</li><li>Je account verwijderen kan altijd in de app: Profiel → Account verwijderen. Dan wordt alles wat in je account staat meteen gewist, ook je gebruikersnaam, profielfoto en vriendschappen. Je logboek op je telefoon blijft staan. Je kunt ook mailen; dan doet de maker het voor je.</li><li>Je gegevens worden bewaard zolang je account bestaat. Je hebt recht op inzage, correctie en verwijdering van je gegevens: mail daarvoor naar <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</li></ul>
-<h2>Vrienden (alleen als je dat kiest)</h2>
-<ul><li>Vrienden is vrijwillig en vraagt een account. Je kiest een gebruikersnaam; anderen kunnen je daarop vinden, maar zien dan alleen die gebruikersnaam.</li><li>Pas als jij een vriendschapsverzoek accepteert (of de ander het jouwe), zien jullie van elkaar: profielfoto, gebruikersnaam, club, het aantal grounds, wedstrijden en landen, je badges, je voortgang per competitie en de kaart van je grounds. Met de schakelaar "Vrienden zien mijn geplande wedstrijden" (standaard aan) zien ze ook bij welke wedstrijden je in het stadion bent. Je beoordelingen, notities, prijzen en foto's van bezoeken zien vrienden nooit.</li><li>Een profielfoto is vrijwillig. Hij wordt verkleind (400 × 400) en bewaard bij Supabase in de EU, en alleen jij en je vrienden kunnen hem zien.</li><li>Je kunt een vriendschap altijd verbreken, iemand blokkeren (dan ziet die niets meer van je en kan je niet meer vinden of een verzoek sturen) en iemand melden. Een melding komt met de gebruikersnaam en je toelichting bij de maker, die er binnen 24 uur naar kijkt.</li><li>Dit alles wordt alleen gebruikt om de vriendenfunctie te laten werken: niet voor reclame, en niet gedeeld of verkocht.</li></ul>
+<p>Weddies is een iPhone-app die laat zien welke voetbalwedstrijden er bij jou in de buurt zijn, en waarmee je een logboek bijhoudt van de grounds die je hebt bezocht. In dit privacybeleid lees je welke gegevens Weddies gebruikt, waarvoor, waar ze staan, hoe lang ze bewaard worden en welke rechten je hebt.</p>
+
+<div class="kort">
+<h2>Kort gezegd</h2>
+<ul>
+<li>Weddies werkt helemaal <strong>zonder account</strong>. Zonder account blijft je logboek op je iPhone en verzamelt Weddies geen persoonsgegevens.</li>
+<li><strong>Geen advertenties, geen analysediensten, geen tracking.</strong> Je gegevens worden nooit verkocht of voor reclame gebruikt.</li>
+<li>Je <strong>locatie</strong> wordt alleen gebruikt als je daar toestemming voor geeft, alleen terwijl je de app gebruikt, en Weddies bewaart hem niet.</li>
+<li>Een <strong>account</strong> en <strong>Vrienden</strong> zijn vrijwillig. Gebruik je ze, dan staan je gegevens in de EU (Frankfurt), en je kunt je account altijd zelf in de app verwijderen.</li>
+</ul>
+</div>
+
+<h2>1. Wie is verantwoordelijk</h2>
+<p>Weddies is gemaakt door Jasper Havers, een zelfstandige ontwikkelaar in Nederland. Hij is de verwerkingsverantwoordelijke voor je persoonsgegevens volgens de Algemene Verordening Gegevensbescherming (AVG). Je bereikt hem via <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</p>
+
+<h2>2. In één oogopslag</h2>
+<table class="tabel">
+<thead><tr><th>Gegevens</th><th>Waarvoor</th><th>Waar</th><th>Hoe lang</th></tr></thead>
+<tbody>
+<tr><td>Logboek, beoordelingen, notities, foto's</td><td data-label="Waarvoor">Je eigen logboek</td><td data-label="Waar">Alleen op je iPhone</td><td data-label="Hoe lang">Tot je ze verwijdert</td></tr>
+<tr><td>Locatie</td><td data-label="Waarvoor">Wedstrijden in de buurt, afstanden, reistijden</td><td data-label="Waar">Op je iPhone; Apple Kaarten voor routes en zoeken naar plekken</td><td data-label="Hoe lang">Weddies bewaart hem niet</td></tr>
+<tr><td>E-mailadres, naam (van Apple), account-ID</td><td data-label="Waarvoor">Inloggen (vrijwillig account)</td><td data-label="Waar">Supabase, EU (Frankfurt)</td><td data-label="Hoe lang">Tot je je account verwijdert</td></tr>
+<tr><td>Logboek in je account (zonder foto's)</td><td data-label="Waarvoor">Back-up en synchroniseren tussen telefoons</td><td data-label="Waar">Supabase, EU (Frankfurt)</td><td data-label="Hoe lang">Tot je je account verwijdert</td></tr>
+<tr><td>Gebruikersnaam, profielfoto, cijfers voor vrienden</td><td data-label="Waarvoor">Vrienden (vrijwillig)</td><td data-label="Waar">Supabase, EU (Frankfurt)</td><td data-label="Hoe lang">Tot je je account verwijdert</td></tr>
+<tr><td>Meldingen over andere gebruikers</td><td data-label="Waarvoor">Veiligheid bij Vrienden</td><td data-label="Waar">Supabase, EU (Frankfurt)</td><td data-label="Hoe lang">Zolang nodig om de melding af te handelen</td></tr>
+<tr><td>Versleuteld IP-adres</td><td data-label="Waarvoor">Misbruik van spelerspagina's voorkomen</td><td data-label="Waar">Supabase, EU (Frankfurt)</td><td data-label="Hoe lang">Hooguit 2 uur</td></tr>
+<tr><td>Feedbackmails</td><td data-label="Waarvoor">Je antwoorden, Weddies verbeteren</td><td data-label="Waar">Mailbox van de maker</td><td data-label="Hoe lang">Zolang nodig</td></tr>
+<tr><td>Verbeteringen van wedstrijden (geen persoonsgegevens)</td><td data-label="Waarvoor">Wedstrijd- en stadiongegevens verbeteren</td><td data-label="Waar">Supabase, EU (Frankfurt)</td><td data-label="Hoe lang">Zolang ze nuttig zijn</td></tr>
+</tbody>
+</table>
+
+<h2>3. Weddies gebruiken zonder account</h2>
+<h3>Je logboek</h3>
+<ul>
+<li>Je bezoeken, beoordelingen, prijzen, notities, biertjes, foto's, eigen wedstrijden en eigen clubs worden alleen op je iPhone bewaard.</li>
+<li>Ze gaan mee in de gewone iCloud-back-up van je iPhone, als je die aan hebt staan (daarvoor geldt het privacybeleid van Apple). De maker van Weddies kan er niet bij.</li>
+</ul>
+<h3>Je locatie</h3>
+<ul>
+<li>Weddies gebruikt je locatie alleen als je daar toestemming voor geeft, en alleen terwijl je de app gebruikt.</li>
+<li>Je locatie wordt gebruikt om wedstrijden bij jou in de buurt te tonen, afstanden te berekenen en bij "Zin in voetbal?" reistijden uit te rekenen.</li>
+<li>Weddies bewaart je locatie niet en stuurt hem nooit naar de maker. Reistijden, zoeken naar een plek (bijvoorbeeld het stadion van een wedstrijd die je zelf toevoegt, of het startpunt van een hoptrip) en plaatsnamen regelt Apple Kaarten; Apple krijgt daarbij de betreffende locaties. Daarvoor geldt het privacybeleid van Apple.</li>
+<li>Je kunt deze toestemming altijd aanpassen of intrekken in de app Instellingen van iOS (Weddies → Locatie).</li>
+</ul>
+<h3>Camera en foto's</h3>
+<ul>
+<li>De camera wordt alleen gebruikt als je zelf een foto maakt. Foto's kies je met de fotokiezer van iOS; Weddies ziet alleen de foto's die je kiest.</li>
+<li>Foto's van je bezoeken blijven op je iPhone en worden nooit geüpload, ook niet met een account.</li>
+</ul>
+<h3>Delen</h3>
+<ul>
+<li>Story-afbeeldingen worden op je iPhone gemaakt. Je deelt ze zelf met de deelknop van iOS (bijvoorbeeld naar Instagram). Weddies stuurt nooit iets automatisch.</li>
+</ul>
+
+<h2>4. Account (alleen als je dat kiest)</h2>
+<ul>
+<li>Een account is helemaal vrijwillig. Zonder account werkt Weddies precies hetzelfde; je logboek staat dan alleen op je telefoon.</li>
+<li>Je logt in met Apple of met een code van 6 cijfers die je per e-mail krijgt. Er is geen wachtwoord.</li>
+<li><strong>Wat er bewaard wordt:</strong> je e-mailadres (of het doorstuuradres van Apple als je "Verberg mijn e-mail" kiest), je naam als Apple die meegeeft, een account-ID en met welke manieren je inlogt. Onze hostingpartij Supabase houdt voor de beveiliging technische inloggegevens bij (zoals tijdstip en IP-adres).</li>
+<li><strong>Je logboek in je account:</strong> bezoeken, beoordelingen, prijzen, notities, aantal biertjes, afgevinkte grounds, eigen wedstrijden, eigen clubs en stadions, verbeterde stadionlocaties, en de instellingen "mijn club(s)", de telregel en "bier verbergen". Je foto's gaan niet mee; die blijven op je telefoon.</li>
+<li><strong>Waarvoor:</strong> alleen om je logboek veilig te bewaren en op je andere telefoons te tonen (bijvoorbeeld na het overstappen naar een nieuwe telefoon). Nooit voor reclame, en nooit gedeeld of verkocht.</li>
+<li><strong>Wie het kan zien:</strong> alleen jij. Regels in de database (Row Level Security) zorgen dat alleen jij je gegevens kunt lezen en wijzigen. De maker heeft als beheerder technische toegang, maar kijkt alleen als jij daarom vraagt (bijvoorbeeld bij een probleem) of als de wet dat verplicht.</li>
+<li>Je e-mailadres wordt alleen gebruikt om je de inlogcode te sturen. Die mail verstuurt Supabase via de e-maildienst Resend. Geen nieuwsbrieven, geen reclame.</li>
+<li><strong>Account verwijderen:</strong> kan altijd in de app via Profiel → Account verwijderen. Alles wat in je account staat wordt dan meteen gewist, ook je gebruikersnaam, profielfoto en vriendschappen. Je logboek op je telefoon blijft staan. Je kunt ook mailen; dan doet de maker het voor je.</li>
+</ul>
+
+<h2>5. Vrienden (alleen als je dat kiest, met account)</h2>
+<ul>
+<li>Je kiest een gebruikersnaam. Anderen kunnen je daarop vinden, maar zien in de zoekresultaten alleen die gebruikersnaam. Een uitnodigingslink die je deelt, bevat je gebruikersnaam.</li>
+<li>Pas als jij een vriendschapsverzoek accepteert (of de ander het jouwe), zien jullie van elkaar: profielfoto, gebruikersnaam, club, het aantal grounds, wedstrijden en landen, badges, voortgang per competitie en de kaart met grounds. Met de schakelaar "Vrienden zien mijn geplande wedstrijden" (standaard aan) zien ze ook bij welke wedstrijden je van plan bent in het stadion te zijn.</li>
+<li>Je beoordelingen, notities, prijzen en foto's van bezoeken zien vrienden <strong>nooit</strong>.</li>
+<li>Een profielfoto is vrijwillig. Hij wordt verkleind tot 400 × 400 pixels en bewaard in een afgeschermde opslag bij Supabase in de EU; alleen jij en je vrienden kunnen hem zien.</li>
+<li>Je kunt altijd een vriendschap verbreken, iemand blokkeren (die ziet dan niets meer van je en kan je niet meer vinden of een verzoek sturen) en iemand melden. Een melding bevat jouw account, het gemelde account en de gebruikersnaam, de reden en je eventuele toelichting. De maker bekijkt meldingen binnen 24 uur en kan inhoud of accounts verwijderen die zich niet aan de regels houden. Meldingen worden bewaard zolang dat nodig is om ze af te handelen en herhaling te voorkomen.</li>
+<li>Deze gegevens worden alleen gebruikt om Vrienden te laten werken: niet voor reclame, en nooit gedeeld of verkocht.</li>
+</ul>
+
 <div class="middenvak onthul" aria-hidden="true"><span class="lijn"></span><svg class="middencirkel" viewBox="-110 -110 220 220" width="220" height="220"><path class="lijntje" pathLength="1" d="M0 -95A95 95 0 1 1 0 95A95 95 0 1 1 0 -95"/><circle class="stip" cx="0" cy="0" r="4.5"/></svg></div>
-<h2>Spelersgegevens</h2>
-<ul><li>Tik je op een speler, dan haalt de app de gegevens van die speler (foto, geboortedatum, club, statistieken) op bij een server van Weddies bij Supabase in de EU, die ze bij API-Football opvraagt. Er gaat alleen het nummer van de speler mee, niets over jou. Om misbruik te voorkomen wordt een onomkeerbaar versleutelde versie van je IP-adres hooguit 2 uur bewaard.</li><li>Wat je zelf met een speler hebt ("Je zag hem 7 keer live") rekent de app op je telefoon uit; dat gaat nergens heen.</li></ul>
-<h2>Wedstrijdgegevens en logo's</h2>
-<ul><li>De app haalt wedstrijden op van een website op GitHub Pages en clublogo's van de server van API-Football (api-sports.io). Zoals bij elke website ontvangen die servers daarbij technische gegevens zoals je IP-adres. Weddies stuurt geen andere gegevens mee.</li></ul>
-<h2>Feedback en contact</h2>
-<ul><li>Als je via "Feedback" een bericht stuurt, gaat dat als gewone e-mail vanuit je eigen mail-app naar de maker. Je ziet de mail voordat je hem verstuurt. Standaard staan daar ook de versie van de app, de iOS-versie, het iPhone-model en de taal in; dat kun je uitzetten.</li><li>De maker gebruikt je e-mail alleen om Weddies te verbeteren en je eventueel te antwoorden, en deelt hem met niemand.</li><li>Kies je voor een Instagram-DM, dan gaat dat via Instagram; daarvoor geldt het privacybeleid van Instagram.</li></ul>
-<h2>Meldingen aan Weddies (alleen als je dat kiest)</h2>
-<ul><li>Voeg je zelf een wedstrijd toe, of verbeter je een uitslag, aftrap of stadion, dan kun je kiezen voor "Meld dit aan Weddies" (of de instelling "Automatisch melden" aanzetten). Dan stuurt de app alleen de voetbalgegevens: de clubs, het stadion en de plek van het stadion, de competitie, de uitslag, de aftrap en het wedstrijdnummer.</li><li>Er gaat niets over jou mee: geen naam, geen e-mailadres, geen toestel en niet waar jij bent.</li><li>De meldingen komen in een database van Weddies bij Supabase, in de EU (Frankfurt). Supabase ziet daarbij, zoals elke website, je IP-adres; Weddies bewaart dat niet. De maker gebruikt de meldingen alleen om de wedstrijd- en stadiongegevens in Weddies te verbeteren.</li></ul>
-<h2>Weddies Plus (aankopen)</h2>
-<ul><li>Weddies Plus koop je via de App Store. De betaling regelt Apple; Weddies krijgt geen naam, e-mailadres of betaalgegevens te zien.</li><li>De app vraagt alleen aan de App Store of je Plus hebt (een abonnement of levenslang). Dat gebeurt op je iPhone; er gaat niets naar een server van Weddies.</li><li>Opzeggen en beheren doe je in de instellingen van je Apple-account. Voor aankopen geldt het privacybeleid van Apple.</li></ul>
-<h2>Geen tracking, geen advertenties</h2>
-<ul><li>Weddies bevat geen advertenties, geen analyse- of statistiekdiensten en volgt je niet in andere apps of websites.</li></ul>
-<h2>Kinderen</h2>
-<ul><li>Weddies is niet speciaal voor kinderen gemaakt, en verzamelt alleen persoonsgegevens als je zelf een account maakt.</li></ul>
+<h2>6. Spelerspagina's</h2>
+<ul>
+<li>Tik je op een speler, dan haalt de app de gegevens van die speler (foto, geboortedatum, club, statistieken) op bij een server van Weddies bij Supabase in de EU, die ze opvraagt bij de voetbaldatadienst API-Football (API-Sports). Er gaat alleen het nummer van de speler mee, niets over jou.</li>
+<li>Om misbruik te voorkomen wordt een onomkeerbaar versleutelde versie van je IP-adres hooguit 2 uur bewaard.</li>
+<li>Wat jij met een speler hebt ("Je zag hem 7 keer live") rekent de app op je telefoon uit; dat gaat nergens heen.</li>
+</ul>
+
+<h2>7. Wedstrijdgegevens, logo's en foto's</h2>
+<ul>
+<li>De app haalt wedstrijden, uitslagen en standen op uit de opslag van Weddies bij Supabase (EU), met een kopie op GitHub Pages als reserve. Logo's van clubs en competities en spelersfoto's komen van api-sports.io.</li>
+<li>Zoals bij elke website ontvangen die servers technische gegevens zoals je IP-adres als de app iets downloadt. Weddies stuurt geen andere gegevens mee, en geen kenmerk waarmee je te herkennen bent. De aanbieders kunnen dit kort in hun logbestanden bewaren voor beveiliging en het oplossen van storingen.</li>
+</ul>
+
+<h2>8. Meldingen aan Weddies (alleen als je dat kiest)</h2>
+<ul>
+<li>Voeg je zelf een wedstrijd toe, of verbeter je een uitslag, aftrap of stadion, dan kun je kiezen voor "Meld dit aan Weddies" (of "Automatisch melden" aanzetten). De app stuurt dan alleen voetbalgegevens: de clubs, het stadion en de plek ervan, de competitie, de uitslag, de aftrap en het wedstrijdnummer.</li>
+<li>Er gaat niets over jou mee: geen naam, geen e-mailadres, geen toestel en niet waar jij bent.</li>
+<li>De meldingen komen in een database van Weddies bij Supabase in de EU (Frankfurt). Supabase ziet daarbij, zoals elke website, je IP-adres; Weddies bewaart dat niet. Meldingen worden alleen gebruikt om de wedstrijd- en stadiongegevens in Weddies te verbeteren.</li>
+</ul>
+
+<h2>9. Feedback en contact</h2>
+<ul>
+<li>Feedback die je via "Feedback" stuurt, is een gewone e-mail vanuit je eigen mail-app naar de maker. Je ziet de mail voordat je hem verstuurt. Standaard staan daar ook de versie van de app, de iOS-versie, het iPhone-model en de taal in; dat kun je uitzetten.</li>
+<li>Je mail wordt alleen gebruikt om je te antwoorden en Weddies te verbeteren, blijft niet langer dan nodig in de mailbox van de maker (Gmail) en wordt met niemand gedeeld.</li>
+<li>Stuur je liever een bericht via Instagram, dan geldt het privacybeleid van Instagram.</li>
+</ul>
+
+<h2>10. Weddies Plus (aankopen)</h2>
+<ul>
+<li>Weddies Plus koop je via de App Store. Apple regelt de betaling; Weddies ziet nooit je naam, e-mailadres of betaalgegevens.</li>
+<li>De app vraagt alleen aan de App Store op je iPhone of je Plus hebt. Er gaat niets naar een server van Weddies.</li>
+<li>Een abonnement beheer of zeg je op in de instellingen van je Apple-account. Voor aankopen geldt het privacybeleid van Apple.</li>
+</ul>
+
+<h2>11. Links naar andere diensten</h2>
+<ul>
+<li>Sommige knoppen openen een andere app of website, bijvoorbeeld een Google-zoekopdracht naar tickets, een route in Apple Kaarten of Instagram. Weddies geeft alleen mee wat nodig is voor die link (zoals de namen van de clubs). Vanaf dat moment geldt het privacybeleid van die dienst.</li>
+</ul>
+
+<h2>12. Geen reclame, geen tracking</h2>
+<ul>
+<li>Weddies bevat geen advertenties, geen analyse- of statistiekdiensten en geen code van derden (SDK's). De app volgt je niet in andere apps of websites en gebruikt het advertentie-ID niet.</li>
+</ul>
+
+<h2>13. Dienstverleners</h2>
+<p>Weddies gebruikt een paar dienstverleners. Zij verwerken gegevens alleen in opdracht van Weddies, voor de functies die hierboven staan:</p>
+<ul>
+<li><strong>Supabase</strong> (servers in Frankfurt, Duitsland): accounts, gesynchroniseerde logboeken, Vrienden, profielfoto's, de spelersserver, wedstrijdgegevens en meldingen.</li>
+<li><strong>Resend</strong> (VS): het versturen van de inlogcode per e-mail.</li>
+<li><strong>GitHub</strong> (VS): reservekopie van de wedstrijdgegevens, en deze website.</li>
+<li><strong>API-Sports / api-sports.io</strong>: clublogo's en spelersfoto's; spelersgegevens via de server van Weddies.</li>
+<li><strong>Apple</strong>: Inloggen met Apple, Apple Kaarten, aankopen in de App Store en de iCloud-back-up.</li>
+<li><strong>Google</strong> (Gmail): de mailbox waarin feedbackmails binnenkomen.</li>
+</ul>
+<p>Een aantal van deze dienstverleners zit in de Verenigde Staten. Als persoonsgegevens buiten de Europese Economische Ruimte terechtkomen, gebeurt dat op basis van het EU-VS Data Privacy Framework of de standaardcontractbepalingen van de Europese Commissie.</p>
+
+<h2>14. Grondslag</h2>
+<ul>
+<li><strong>Uitvoering van een overeenkomst</strong> (art. 6 lid 1 sub b AVG): je account, het synchroniseren van je logboek, Vrienden, inlogmails en spelerspagina's, omdat jij om die functies vraagt.</li>
+<li><strong>Gerechtvaardigd belang</strong> (art. 6 lid 1 sub f AVG): beveiliging en misbruik voorkomen (zoals het versleutelde IP-adres en technische logbestanden), meldingen en blokkades afhandelen, je berichten beantwoorden en wedstrijd- en stadiongegevens verbeteren.</li>
+<li><strong>Toestemming</strong> (art. 6 lid 1 sub a AVG): toegang tot je locatie, camera en foto's, de vrijwillige profielfoto en de vrijwillige toestelgegevens in feedback. Je kunt je toestemming altijd intrekken, bijvoorbeeld in de app Instellingen van iOS.</li>
+</ul>
+
+<h2>15. Beveiliging</h2>
+<ul>
+<li>Alle verbindingen zijn versleuteld (HTTPS). Je inlogsessie staat in de sleutelhanger van iOS. Regels in de database zorgen dat alleen jij bij je accountgegevens kunt. Weddies verzamelt zo weinig mogelijk gegevens.</li>
+</ul>
+
+<h2>16. Je rechten</h2>
+<ul>
+<li>Je hebt recht op inzage, correctie en verwijdering van je gegevens, op beperking van en bezwaar tegen de verwerking, op overdraagbaarheid van je gegevens en op het intrekken van je toestemming.</li>
+<li>Veel daarvan kun je zelf in de app: je gegevens aanpassen, je logboek exporteren ("Exporteer logboek (CSV)") en je account verwijderen (Profiel → Account verwijderen).</li>
+<li>Voor al het andere mail je naar <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>. Je krijgt binnen een maand antwoord.</li>
+<li>Je hebt ook het recht om een klacht in te dienen bij de Autoriteit Persoonsgegevens (<a href="https://autoriteitpersoonsgegevens.nl">autoriteitpersoonsgegevens.nl</a>) of bij de toezichthouder in je eigen land.</li>
+</ul>
+
+<h2>17. Kinderen</h2>
+<ul>
+<li>Weddies is niet bedoeld voor kinderen jonger dan 13 jaar en verzamelt niet bewust hun persoonsgegevens. Ben je jonger dan 16, maak dan alleen een account met toestemming van een ouder of verzorger.</li>
+<li>Denk je dat een kind zonder toestemming een account heeft gemaakt? Mail ons, dan verwijderen we het.</li>
+</ul>
+
+<h2>18. Wijzigingen</h2>
+<p>Als dit privacybeleid verandert, staat de nieuwe versie op deze pagina, met een nieuwe datum. Belangrijke wijzigingen noemen we ook in de beschrijving van de app-update.</p>
+
+<h2>19. Contact</h2>
+<p>Vragen over privacy of dit beleid? Mail naar <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</p>
 <h2>Deze website</h2>
-<ul><li>Deze website (weddiesapp.com) gebruikt geen cookies, geen analyse en geen tracking. Hij onthoudt alleen in je eigen browser welke taal je kiest. De website staat op GitHub Pages; zoals bij elke website ontvangt GitHub daarbij technische gegevens zoals je IP-adres.</li></ul>
-<h2>Vragen</h2>
-<p>Vragen over dit privacybeleid? Mail naar <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</p>
-<p>Als dit beleid verandert, staat de nieuwe versie op deze pagina.</p>
+<ul><li>Deze website gebruikt geen cookies, geen analyse en geen tracking. Hij onthoudt alleen in je eigen browser welke taal je kiest. De voorpagina haalt de wedstrijden van vandaag op uit dezelfde openbare bestanden als de app; de website staat op GitHub Pages, en zoals bij elke website ontvangt GitHub daarbij technische gegevens zoals je IP-adres.</li></ul>
 </div>
 
 <!-- ============================ ENGLISH ============================ -->
 <div class="kaart" data-lang="en">
-<p class="klein">This is a translation. If the translations differ, the Dutch text applies.</p>
-<p>Weddies is an app by Jasper Havers that shows you which football matches are near you and keeps track of your stadium visits. Weddies does not collect personal data unless you create an account yourself. Below is exactly what happens.</p>
-<h2>Your location</h2>
-<ul><li>Weddies only uses your location if you give permission, and only while you are using the app.</li><li>Your location is used to show nearby matches, calculate distances and (for "Fancy a match?") request the travel time.</li><li>Weddies does not store your location and does not send it to the maker of the app. For the travel time, the app requests a route from Apple Maps; Apple's privacy policy applies to that.</li></ul>
-<h2>Your logbook, ratings and photos</h2>
-<ul><li>Without an account, your stadium visits, ratings, prices, notes and photos are stored only on your own iPhone.</li><li>They are included in your iPhone's normal iCloud backup, if you have it turned on. The maker of Weddies cannot access them.</li><li>You choose photos yourself with the iOS photo picker; Weddies only sees the photos you pick. The camera is only used when you take a photo yourself.</li><li>You share a story yourself via the iOS share button (for example to Instagram). Weddies sends nothing automatically.</li></ul>
-<h2>Account (only if you choose to)</h2>
-<ul><li>An account is entirely optional. Without an account Weddies works exactly the same; your logbook is then only on your phone.</li><li>You sign in with Apple or with a code you receive by email. There is no password. Weddies then stores your email address (or Apple's relay address if you choose "Hide My Email"), your name if Apple provides it, and which methods you can sign in with.</li><li>With an account, your logbook is stored in Weddies' database at Supabase, in the EU (Frankfurt): your visits, ratings, prices, notes, the number of beers, ticked-off grounds, own matches, own clubs and grounds, and the settings "my club(s)", the counting rule and "hide beer rating". Your photos are not included; they stay on your phone.</li><li>This is only done to keep your logbook safe and show it on your other phones (for example after switching to a new phone). Not for advertising, and it is never shared or sold.</li><li>Only you can read and change your data; this is enforced by the database. The maker can access it as administrator, but only looks if you ask (for example when there is a problem).</li><li>Your email address is only used to send you the sign-in code. Supabase sends that email through the email service Resend. No newsletters, no spam.</li><li>You can delete your account at any time in the app: Profile → Delete account. Everything in your account is then erased immediately, including your username, profile photo and friendships. The logbook on your phone stays. You can also send an email; the maker will then do it for you.</li><li>Your data is kept as long as your account exists. You have the right to access, correct and delete your data: email <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</li></ul>
-<h2>Friends (only if you choose to)</h2>
-<ul><li>Friends is optional and requires an account. You choose a username; others can find you by it, but then only see that username.</li><li>Only once you accept a friend request (or the other person accepts yours) do you see each other's profile photo, username, club, number of grounds, matches and countries, badges, progress per league and map of grounds. With the switch "Friends see my planned matches" (on by default) they also see which matches you will attend in the stadium. Friends never see your ratings, notes, prices or visit photos.</li><li>A profile photo is optional. It is resized (400 × 400) and stored at Supabase in the EU, and only you and your friends can see it.</li><li>You can always end a friendship, block someone (they then see nothing of you any more and can no longer find you or send you a request) and report someone. A report reaches the maker with the username and your explanation, and is reviewed within 24 hours.</li><li>All of this is only used to make the friends feature work: not for advertising, and never shared or sold.</li></ul>
+<p>Weddies is an iPhone app that shows football matches near you and lets you keep a logbook of the grounds you have visited. This policy explains which data Weddies uses, why, where it is stored, how long it is kept and what your rights are.</p>
+
+<div class="kort">
+<h2>In short</h2>
+<ul>
+<li>Weddies works fully <strong>without an account</strong>. Without one, your logbook stays on your iPhone and Weddies collects no personal data.</li>
+<li><strong>No ads, no analytics, no tracking.</strong> Your data is never sold or used for advertising.</li>
+<li>Your <strong>location</strong> is only used with your permission, only while you use the app, and is not stored by Weddies.</li>
+<li>An <strong>account</strong> and <strong>Friends</strong> are optional. If you use them, your data is stored in the EU (Frankfurt), and you can delete your account at any time in the app.</li>
+</ul>
+</div>
+
+<h2>1. Who is responsible</h2>
+<p>Weddies is made by Jasper Havers, an independent developer in the Netherlands. He is the controller of your personal data under the EU General Data Protection Regulation (GDPR). You can reach him at <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</p>
+
+<h2>2. At a glance</h2>
+<table class="tabel">
+<thead><tr><th>Data</th><th>Why</th><th>Where</th><th>How long</th></tr></thead>
+<tbody>
+<tr><td>Logbook, ratings, notes, photos</td><td data-label="Why">Your own logbook</td><td data-label="Where">Only on your iPhone</td><td data-label="How long">Until you delete them</td></tr>
+<tr><td>Location</td><td data-label="Why">Nearby matches, distances, travel times</td><td data-label="Where">On your iPhone; Apple Maps for routes and place searches</td><td data-label="How long">Not stored by Weddies</td></tr>
+<tr><td>Email address, name (from Apple), account ID</td><td data-label="Why">Signing in (optional account)</td><td data-label="Where">Supabase, EU (Frankfurt)</td><td data-label="How long">Until you delete your account</td></tr>
+<tr><td>Logbook in your account (without photos)</td><td data-label="Why">Backup and syncing between phones</td><td data-label="Where">Supabase, EU (Frankfurt)</td><td data-label="How long">Until you delete your account</td></tr>
+<tr><td>Username, profile photo, stats for friends</td><td data-label="Why">Friends (optional)</td><td data-label="Where">Supabase, EU (Frankfurt)</td><td data-label="How long">Until you delete your account</td></tr>
+<tr><td>Reports about other users</td><td data-label="Why">Safety in Friends</td><td data-label="Where">Supabase, EU (Frankfurt)</td><td data-label="How long">As long as needed to handle the report</td></tr>
+<tr><td>Hashed IP address</td><td data-label="Why">Preventing abuse of player pages</td><td data-label="Where">Supabase, EU (Frankfurt)</td><td data-label="How long">At most 2 hours</td></tr>
+<tr><td>Feedback emails</td><td data-label="Why">Answering you, improving Weddies</td><td data-label="Where">The developer's mailbox</td><td data-label="How long">As long as needed</td></tr>
+<tr><td>Match corrections (no personal data)</td><td data-label="Why">Improving match and ground data</td><td data-label="Where">Supabase, EU (Frankfurt)</td><td data-label="How long">As long as useful</td></tr>
+</tbody>
+</table>
+
+<h2>3. Using Weddies without an account</h2>
+<h3>Your logbook</h3>
+<ul>
+<li>Your visits, ratings, prices, notes, beers, photos, own matches and own clubs are stored only on your iPhone.</li>
+<li>They are included in your iPhone's regular iCloud backup if you have that turned on (Apple's privacy policy applies). The developer cannot access them.</li>
+</ul>
+<h3>Your location</h3>
+<ul>
+<li>Weddies only uses your location if you allow it, and only while you are using the app.</li>
+<li>It is used to show matches near you, to calculate distances and, for "Fancy a match?", to work out travel times.</li>
+<li>Weddies does not store your location and never sends it to the developer. Travel times, place searches (for example the ground of a match you add yourself or the starting point of a hop trip) and place names are handled by Apple Maps, which receives the locations involved. Apple's privacy policy applies.</li>
+<li>You can change or withdraw this permission at any time in the iOS Settings app (Weddies → Location).</li>
+</ul>
+<h3>Camera and photos</h3>
+<ul>
+<li>The camera is only used when you take a photo yourself. You choose photos with the iOS photo picker; Weddies only sees the photos you pick.</li>
+<li>Photos of your visits stay on your iPhone and are never uploaded, not even with an account.</li>
+</ul>
+<h3>Sharing</h3>
+<ul>
+<li>Story images are created on your iPhone. You share them yourself using the iOS share button (for example to Instagram). Weddies never sends anything automatically.</li>
+</ul>
+
+<h2>4. Account (optional)</h2>
+<ul>
+<li>An account is entirely voluntary. Without one, Weddies works exactly the same; your logbook then stays only on your phone.</li>
+<li>You sign in with Apple or with a 6-digit code sent by email. There is no password.</li>
+<li><strong>What is stored:</strong> your email address (or Apple's relay address if you choose "Hide My Email"), your name if Apple provides it, an account ID and the sign-in methods you use. Our hosting provider Supabase keeps technical sign-in records (such as time and IP address) for security.</li>
+<li><strong>Your logbook in your account:</strong> visits, ratings, prices, notes, number of beers, ticked-off grounds, own matches, own clubs and grounds, corrected ground locations, and the settings "my club(s)", counting rule and "hide beer". Your photos are not included; they stay on your phone.</li>
+<li><strong>Why:</strong> only to keep your logbook safe and show it on your other phones (for example after switching to a new phone). Never for advertising, and never shared or sold.</li>
+<li><strong>Who can see it:</strong> only you. Database rules (Row Level Security) make sure only you can read and change your data. The developer has technical admin access, but only looks at your data when you ask (for example for support) or when required by law.</li>
+<li>Your email address is only used to send you the sign-in code. That email is sent by Supabase through the email service Resend. No newsletters, no marketing.</li>
+<li><strong>Deleting your account:</strong> at any time in the app via Profile → Delete account. Everything in your account is then deleted immediately, including your username, profile photo and friendships. The logbook on your phone stays. You can also email us and we will do it for you.</li>
+</ul>
+
+<h2>5. Friends (optional, requires an account)</h2>
+<ul>
+<li>You choose a username. Others can find you by it, but in search results they only see that username. An invite link you share contains your username.</li>
+<li>Only after you accept a friend request (or the other person accepts yours) do you see each other's profile photo, username, club, number of grounds, matches and countries, badges, progress per league and map of grounds. With the switch "Friends see my planned matches" (on by default) they also see which matches you plan to attend at the stadium.</li>
+<li>Friends <strong>never</strong> see your ratings, notes, prices or photos of visits.</li>
+<li>A profile photo is optional. It is resized to 400 × 400 pixels and stored in private storage at Supabase in the EU; only you and your friends can see it.</li>
+<li>You can remove a friend, block someone (they then no longer see anything of you and can no longer find you or send you a request) and report someone at any time. A report contains your account, the reported account and username, the reason and your optional explanation. The developer reviews reports within 24 hours and can remove content or accounts that break the rules. Reports are kept as long as needed to handle them and prevent repeated abuse.</li>
+<li>This data is only used to make Friends work: not for advertising, and never shared or sold.</li>
+</ul>
+
 <div class="middenvak onthul" aria-hidden="true"><span class="lijn"></span><svg class="middencirkel" viewBox="-110 -110 220 220" width="220" height="220"><path class="lijntje" pathLength="1" d="M0 -95A95 95 0 1 1 0 95A95 95 0 1 1 0 -95"/><circle class="stip" cx="0" cy="0" r="4.5"/></svg></div>
-<h2>Player data</h2>
-<ul><li>When you tap a player, the app fetches that player's data (photo, date of birth, club, statistics) from a Weddies server at Supabase in the EU, which requests it from API-Football. Only the player's number is sent, nothing about you. To prevent abuse, an irreversibly hashed version of your IP address is kept for at most 2 hours.</li><li>What you have with a player yourself ("You saw him live 7 times") is calculated by the app on your phone; it goes nowhere.</li></ul>
-<h2>Match data and logos</h2>
-<ul><li>The app loads matches from a website on GitHub Pages and club logos from the API-Football server (api-sports.io). As with any website, those servers receive technical data such as your IP address. Weddies sends no other data.</li></ul>
-<h2>Feedback and contact</h2>
-<ul><li>If you send a message via "Feedback", it goes as an ordinary email from your own mail app to the maker. You see the email before you send it. By default it also contains the app version, iOS version, iPhone model and language; you can turn that off.</li><li>The maker only uses your email to improve Weddies and possibly reply to you, and shares it with no one.</li><li>If you choose an Instagram DM, it goes through Instagram; Instagram's privacy policy applies.</li></ul>
-<h2>Reports to Weddies (only if you choose to)</h2>
-<ul><li>If you add a match yourself, or correct a score, kick-off time or ground, you can choose "Report this to Weddies" (or turn on the setting "Report automatically"). The app then sends only the football details: the clubs, the ground and its location, the league, the score, the kick-off and the match number.</li><li>Nothing about you is sent: no name, no email address, no device and not where you are.</li><li>Reports go into a Weddies database at Supabase, in the EU (Frankfurt). Like any website, Supabase sees your IP address; Weddies does not store it. The maker only uses reports to improve the match and ground data in Weddies.</li></ul>
-<h2>Weddies Plus (purchases)</h2>
-<ul><li>You buy Weddies Plus through the App Store. Apple handles the payment; Weddies never sees a name, email address or payment details.</li><li>The app only asks the App Store whether you have Plus (a subscription or lifetime). That happens on your iPhone; nothing is sent to a Weddies server.</li><li>You cancel and manage it in your Apple Account settings. Apple's privacy policy applies to purchases.</li></ul>
-<h2>No tracking, no ads</h2>
-<ul><li>Weddies contains no advertising, no analytics or statistics services, and does not track you across other apps or websites.</li></ul>
-<h2>Children</h2>
-<ul><li>Weddies is not made specifically for children, and only collects personal data if you create an account yourself.</li></ul>
+<h2>6. Player pages</h2>
+<ul>
+<li>When you tap a player, the app fetches that player's details (photo, date of birth, club, statistics) from a Weddies server at Supabase in the EU, which requests them from the football data service API-Football (API-Sports). Only the player's number is sent, nothing about you.</li>
+<li>To prevent abuse, a one-way hashed (irreversible) version of your IP address is kept for at most 2 hours.</li>
+<li>What you personally have with a player ("You saw him live 7 times") is calculated on your phone and is not sent anywhere.</li>
+</ul>
+
+<h2>7. Match data, logos and photos</h2>
+<ul>
+<li>The app loads matches, scores and tables from Weddies' storage at Supabase (EU), with a copy on GitHub Pages as a backup. Club and league logos and player photos are loaded from api-sports.io.</li>
+<li>As with any website, these servers receive technical data such as your IP address when the app downloads something. Weddies does not send any other data, and no identifier. The providers may keep this in their logs for a short time for security and troubleshooting.</li>
+</ul>
+
+<h2>8. Reporting to Weddies (optional)</h2>
+<ul>
+<li>If you add a match yourself, or correct a score, kick-off time or ground, you can choose "Report this to Weddies" (or turn on "Report automatically"). The app then sends only football details: the clubs, the ground and its location, the league, the score, the kick-off time and the match number.</li>
+<li>Nothing about you is sent: no name, no email address, no device and not where you are.</li>
+<li>Reports go to a Weddies database at Supabase in the EU (Frankfurt). Like any website, Supabase sees your IP address; Weddies does not store it. Reports are only used to improve the match and ground data in Weddies.</li>
+</ul>
+
+<h2>9. Feedback and contact</h2>
+<ul>
+<li>Feedback you send through "Feedback" is an ordinary email from your own mail app to the developer. You see the email before you send it. By default it includes the app version, iOS version, iPhone model and language; you can turn that off.</li>
+<li>Your email is only used to answer you and improve Weddies, is kept in the developer's mailbox (Gmail) only as long as needed and is never shared.</li>
+<li>If you choose an Instagram message instead, Instagram's privacy policy applies.</li>
+</ul>
+
+<h2>10. Weddies Plus (purchases)</h2>
+<ul>
+<li>Weddies Plus is bought through the App Store. Apple handles the payment; Weddies never sees your name, email address or payment details.</li>
+<li>The app only asks the App Store on your iPhone whether you have Plus. Nothing is sent to a Weddies server.</li>
+<li>You manage or cancel a subscription in your Apple Account settings. Apple's privacy policy applies to purchases.</li>
+</ul>
+
+<h2>11. Links to other services</h2>
+<ul>
+<li>Some buttons open another app or website, for example a Google search for tickets, a route in Apple Maps or Instagram. Weddies only passes on what is needed for that link (such as the club names). From then on, that service's own privacy policy applies.</li>
+</ul>
+
+<h2>12. No advertising, no tracking</h2>
+<ul>
+<li>Weddies contains no advertising, no analytics or statistics services and no third-party SDKs. It does not track you across other apps or websites and does not use the advertising identifier.</li>
+</ul>
+
+<h2>13. Service providers</h2>
+<p>Weddies uses a few service providers. They only process data on Weddies' behalf, to provide the features described above:</p>
+<ul>
+<li><strong>Supabase</strong> (servers in Frankfurt, Germany): accounts, synced logbooks, Friends, profile photos, the player server, match data and reports.</li>
+<li><strong>Resend</strong> (USA): sending the sign-in code by email.</li>
+<li><strong>GitHub</strong> (USA): backup copy of the match data, and hosting this website.</li>
+<li><strong>API-Sports / api-sports.io</strong>: club logos and player photos; player data via the Weddies server.</li>
+<li><strong>Apple</strong>: Sign in with Apple, Apple Maps, App Store purchases and iCloud backup.</li>
+<li><strong>Google</strong> (Gmail): the mailbox that receives feedback emails.</li>
+</ul>
+<p>Some of these providers are based in the United States. Where personal data is transferred outside the European Economic Area, this happens on the basis of the EU–US Data Privacy Framework or the European Commission's Standard Contractual Clauses.</p>
+
+<h2>14. Legal basis</h2>
+<ul>
+<li><strong>Performance of a contract</strong> (Art. 6(1)(b) GDPR): your account, syncing your logbook, Friends, sign-in emails and player pages, because you ask for these features.</li>
+<li><strong>Legitimate interests</strong> (Art. 6(1)(f) GDPR): security and preventing abuse (such as the hashed IP address and technical logs), handling reports and blocks, answering your messages and improving match and ground data.</li>
+<li><strong>Consent</strong> (Art. 6(1)(a) GDPR): access to your location, camera and photos, the optional profile photo and the optional device details in feedback. You can withdraw consent at any time, for example in the iOS Settings app.</li>
+</ul>
+
+<h2>15. Security</h2>
+<ul>
+<li>All connections use encryption (HTTPS). Your sign-in session is stored in the iOS Keychain. Database rules ensure that only you can access your account data. Weddies collects as little data as possible.</li>
+</ul>
+
+<h2>16. Your rights</h2>
+<ul>
+<li>You have the right to access, correct and delete your data, to restrict or object to its processing, to data portability and to withdraw consent.</li>
+<li>Much of this you can do yourself in the app: change your data, export your logbook ("Export logbook (CSV)") and delete your account (Profile → Delete account).</li>
+<li>For everything else, email <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>. You will receive an answer within one month.</li>
+<li>You also have the right to lodge a complaint with a data protection authority, such as the Dutch Autoriteit Persoonsgegevens (<a href="https://autoriteitpersoonsgegevens.nl">autoriteitpersoonsgegevens.nl</a>) or the authority in your own country.</li>
+</ul>
+
+<h2>17. Children</h2>
+<ul>
+<li>Weddies is not aimed at children under 13 and does not knowingly collect their personal data. If you are under 16, only create an account with permission from a parent or guardian.</li>
+<li>If you believe a child has created an account without permission, please email us and we will delete it.</li>
+</ul>
+
+<h2>18. Changes</h2>
+<p>If this policy changes, the new version will be published on this page with a new date. Important changes will also be mentioned in the release notes of the app update.</p>
+
+<h2>19. Contact</h2>
+<p>Questions about privacy or this policy? Email <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</p>
 <h2>This website</h2>
-<ul><li>This website (weddiesapp.com) uses no cookies, no analytics and no tracking. It only remembers, in your own browser, which language you choose. The website is hosted on GitHub Pages; as with any website, GitHub receives technical data such as your IP address.</li></ul>
-<h2>Questions</h2>
-<p>Questions about this privacy policy? Email <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</p>
-<p>If this policy changes, the new version will be on this page.</p>
+<ul><li>This website uses no cookies, no analytics and no tracking. It only remembers, in your own browser, which language you choose. The homepage loads today’s matches from the same public files as the app; the website is hosted on GitHub Pages, and as with any website, GitHub receives technical data such as your IP address.</li></ul>
 </div>
 
 <!-- ============================ DEUTSCH ============================ -->
 <div class="kaart" data-lang="de">
-<p class="klein">Dies ist eine Übersetzung. Bei Abweichungen gilt der niederländische Text.</p>
-<p>Weddies ist eine App von Jasper Havers, die dir zeigt, welche Fußballspiele in deiner Nähe stattfinden, und deine Stadionbesuche festhält. Weddies erhebt keine personenbezogenen Daten, es sei denn, du legst selbst einen Account an. Hier steht genau, was passiert.</p>
-<h2>Dein Standort</h2>
-<ul><li>Weddies verwendet deinen Standort nur, wenn du es erlaubst, und nur während du die App benutzt.</li><li>Dein Standort wird verwendet, um Spiele in der Nähe anzuzeigen, Entfernungen zu berechnen und (bei „Lust auf Fußball?“) die Reisezeit abzufragen.</li><li>Weddies speichert deinen Standort nicht und schickt ihn nicht an den Entwickler der App. Für die Reisezeit fragt die App eine Route bei Apple Karten ab; dafür gilt die Datenschutzrichtlinie von Apple.</li></ul>
-<h2>Dein Logbuch, Bewertungen und Fotos</h2>
-<ul><li>Ohne Account werden deine Stadionbesuche, Bewertungen, Preise, Notizen und Fotos nur auf deinem eigenen iPhone gespeichert.</li><li>Sie sind im normalen iCloud-Backup deines iPhones enthalten, wenn du es eingeschaltet hast. Der Entwickler von Weddies hat keinen Zugriff darauf.</li><li>Fotos wählst du selbst mit der Fotoauswahl von iOS; Weddies sieht nur die Fotos, die du auswählst. Die Kamera wird nur verwendet, wenn du selbst ein Foto machst.</li><li>Eine Story teilst du selbst über die Teilen-Taste von iOS (zum Beispiel auf Instagram). Weddies verschickt nichts automatisch.</li></ul>
-<h2>Account (nur wenn du es möchtest)</h2>
-<ul><li>Ein Account ist völlig freiwillig. Ohne Account funktioniert Weddies genauso; dein Logbuch ist dann nur auf deinem Handy.</li><li>Du meldest dich mit Apple an oder mit einem Code, den du per E-Mail bekommst. Es gibt kein Passwort. Weddies speichert dann deine E-Mail-Adresse (oder die Weiterleitungsadresse von Apple, wenn du „E-Mail-Adresse verbergen“ wählst), deinen Namen, falls Apple ihn mitgibt, und mit welchen Methoden du dich anmelden kannst.</li><li>Mit einem Account wird dein Logbuch in der Datenbank von Weddies bei Supabase in der EU (Frankfurt) gespeichert: deine Besuche, Bewertungen, Preise, Notizen, die Anzahl der Biere, abgehakte Grounds, eigene Spiele, eigene Vereine und Stadien sowie die Einstellungen „Mein(e) Verein(e)“, die Zählregel und „Bier-Bewertung ausblenden“. Deine Fotos gehören nicht dazu; sie bleiben auf deinem Handy.</li><li>Das geschieht nur, um dein Logbuch sicher aufzubewahren und auf deinen anderen Handys anzuzeigen (zum Beispiel nach dem Wechsel auf ein neues Handy). Nicht für Werbung, und es wird mit niemandem geteilt oder verkauft.</li><li>Nur du kannst deine Daten lesen und ändern; das wird von der Datenbank erzwungen. Der Entwickler hat als Administrator Zugriff, schaut aber nur hinein, wenn du darum bittest (zum Beispiel bei einem Problem).</li><li>Deine E-Mail-Adresse wird nur verwendet, um dir den Anmeldecode zu schicken. Diese E-Mail verschickt Supabase über den E-Mail-Dienst Resend. Keine Newsletter, kein Spam.</li><li>Du kannst deinen Account jederzeit in der App löschen: Profil → Account löschen. Dann wird alles in deinem Account sofort gelöscht, auch dein Benutzername, dein Profilfoto und deine Freundschaften. Das Logbuch auf deinem Handy bleibt erhalten. Du kannst auch eine E-Mail schicken; dann erledigt der Entwickler das für dich.</li><li>Deine Daten werden gespeichert, solange dein Account besteht. Du hast das Recht auf Auskunft, Berichtigung und Löschung deiner Daten: schreib dafür an <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</li></ul>
-<h2>Freunde (nur wenn du es möchtest)</h2>
-<ul><li>Freunde ist freiwillig und erfordert einen Account. Du wählst einen Benutzernamen; andere können dich darüber finden, sehen dann aber nur diesen Benutzernamen.</li><li>Erst wenn du eine Freundschaftsanfrage annimmst (oder die andere Person deine), seht ihr voneinander: Profilfoto, Benutzername, Verein, die Anzahl der Grounds, Spiele und Länder, deine Badges, deinen Fortschritt pro Liga und die Karte deiner Grounds. Mit dem Schalter „Freunde sehen meine geplanten Spiele“ (standardmäßig an) sehen sie auch, bei welchen Spielen du im Stadion bist. Deine Bewertungen, Notizen, Preise und Fotos von Besuchen sehen Freunde nie.</li><li>Ein Profilfoto ist freiwillig. Es wird verkleinert (400 × 400) und bei Supabase in der EU gespeichert, und nur du und deine Freunde können es sehen.</li><li>Du kannst eine Freundschaft jederzeit beenden, jemanden blockieren (die Person sieht dann nichts mehr von dir und kann dich nicht mehr finden oder dir eine Anfrage schicken) und jemanden melden. Eine Meldung geht mit dem Benutzernamen und deiner Erläuterung an den Entwickler, der sie innerhalb von 24 Stunden prüft.</li><li>All das wird nur verwendet, damit die Freunde-Funktion funktioniert: nicht für Werbung, und es wird nicht geteilt oder verkauft.</li></ul>
+<p>Weddies ist eine iPhone-App, die dir Fußballspiele in deiner Nähe zeigt und mit der du ein Logbuch der Grounds führst, die du besucht hast. In dieser Datenschutzerklärung erfährst du, welche Daten Weddies nutzt, wofür, wo sie gespeichert werden, wie lange sie aufbewahrt werden und welche Rechte du hast.</p>
+
+<div class="kort">
+<h2>Kurz gesagt</h2>
+<ul>
+<li>Weddies funktioniert vollständig <strong>ohne Konto</strong>. Ohne Konto bleibt dein Logbuch auf deinem iPhone und Weddies erhebt keine personenbezogenen Daten.</li>
+<li><strong>Keine Werbung, keine Analysedienste, kein Tracking.</strong> Deine Daten werden nie verkauft oder für Werbung genutzt.</li>
+<li>Dein <strong>Standort</strong> wird nur mit deiner Erlaubnis genutzt, nur während du die App verwendest, und Weddies speichert ihn nicht.</li>
+<li>Ein <strong>Konto</strong> und <strong>Freunde</strong> sind freiwillig. Wenn du sie nutzt, liegen deine Daten in der EU (Frankfurt), und du kannst dein Konto jederzeit selbst in der App löschen.</li>
+</ul>
+</div>
+
+<h2>1. Verantwortlicher</h2>
+<p>Weddies wird von Jasper Havers entwickelt, einem unabhängigen Entwickler in den Niederlanden. Er ist Verantwortlicher für deine personenbezogenen Daten im Sinne der Datenschutz-Grundverordnung (DSGVO). Du erreichst ihn unter <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</p>
+
+<h2>2. Auf einen Blick</h2>
+<table class="tabel">
+<thead><tr><th>Daten</th><th>Wofür</th><th>Wo</th><th>Wie lange</th></tr></thead>
+<tbody>
+<tr><td>Logbuch, Bewertungen, Notizen, Fotos</td><td data-label="Wofür">Dein eigenes Logbuch</td><td data-label="Wo">Nur auf deinem iPhone</td><td data-label="Wie lange">Bis du sie löschst</td></tr>
+<tr><td>Standort</td><td data-label="Wofür">Spiele in der Nähe, Entfernungen, Fahrzeiten</td><td data-label="Wo">Auf deinem iPhone; Apple Karten für Routen und Ortssuche</td><td data-label="Wie lange">Wird von Weddies nicht gespeichert</td></tr>
+<tr><td>E-Mail-Adresse, Name (von Apple), Konto-ID</td><td data-label="Wofür">Anmelden (freiwilliges Konto)</td><td data-label="Wo">Supabase, EU (Frankfurt)</td><td data-label="Wie lange">Bis du dein Konto löschst</td></tr>
+<tr><td>Logbuch in deinem Konto (ohne Fotos)</td><td data-label="Wofür">Sicherung und Abgleich zwischen Handys</td><td data-label="Wo">Supabase, EU (Frankfurt)</td><td data-label="Wie lange">Bis du dein Konto löschst</td></tr>
+<tr><td>Benutzername, Profilfoto, Zahlen für Freunde</td><td data-label="Wofür">Freunde (freiwillig)</td><td data-label="Wo">Supabase, EU (Frankfurt)</td><td data-label="Wie lange">Bis du dein Konto löschst</td></tr>
+<tr><td>Meldungen über andere Nutzer</td><td data-label="Wofür">Sicherheit bei Freunde</td><td data-label="Wo">Supabase, EU (Frankfurt)</td><td data-label="Wie lange">So lange, wie für die Bearbeitung nötig</td></tr>
+<tr><td>Gehashte IP-Adresse</td><td data-label="Wofür">Missbrauch von Spielerseiten verhindern</td><td data-label="Wo">Supabase, EU (Frankfurt)</td><td data-label="Wie lange">Höchstens 2 Stunden</td></tr>
+<tr><td>Feedback-E-Mails</td><td data-label="Wofür">Dir antworten, Weddies verbessern</td><td data-label="Wo">Postfach des Entwicklers</td><td data-label="Wie lange">So lange wie nötig</td></tr>
+<tr><td>Korrekturen zu Spielen (keine personenbezogenen Daten)</td><td data-label="Wofür">Spiel- und Stadiondaten verbessern</td><td data-label="Wo">Supabase, EU (Frankfurt)</td><td data-label="Wie lange">So lange sie nützlich sind</td></tr>
+</tbody>
+</table>
+
+<h2>3. Weddies ohne Konto nutzen</h2>
+<h3>Dein Logbuch</h3>
+<ul>
+<li>Deine Besuche, Bewertungen, Preise, Notizen, Biere, Fotos, eigenen Spiele und eigenen Vereine werden nur auf deinem iPhone gespeichert.</li>
+<li>Sie sind im normalen iCloud-Backup deines iPhones enthalten, wenn du es eingeschaltet hast (dafür gilt die Datenschutzrichtlinie von Apple). Der Entwickler von Weddies hat keinen Zugriff darauf.</li>
+</ul>
+<h3>Dein Standort</h3>
+<ul>
+<li>Weddies nutzt deinen Standort nur, wenn du es erlaubst, und nur während du die App verwendest.</li>
+<li>Dein Standort wird genutzt, um Spiele in deiner Nähe zu zeigen, Entfernungen zu berechnen und bei „Lust auf Fußball?“ Fahrzeiten zu ermitteln.</li>
+<li>Weddies speichert deinen Standort nicht und schickt ihn nie an den Entwickler. Fahrzeiten, die Suche nach Orten (zum Beispiel dem Stadion eines Spiels, das du selbst hinzufügst, oder dem Startpunkt einer Hoptour) und Ortsnamen übernimmt Apple Karten; Apple erhält dabei die betreffenden Orte. Dafür gilt die Datenschutzrichtlinie von Apple.</li>
+<li>Du kannst diese Erlaubnis jederzeit in der iOS-App Einstellungen ändern oder widerrufen (Weddies → Standort).</li>
+</ul>
+<h3>Kamera und Fotos</h3>
+<ul>
+<li>Die Kamera wird nur genutzt, wenn du selbst ein Foto machst. Fotos wählst du mit der Fotoauswahl von iOS; Weddies sieht nur die Fotos, die du auswählst.</li>
+<li>Fotos deiner Besuche bleiben auf deinem iPhone und werden nie hochgeladen, auch nicht mit einem Konto.</li>
+</ul>
+<h3>Teilen</h3>
+<ul>
+<li>Story-Bilder werden auf deinem iPhone erstellt. Du teilst sie selbst über die Teilen-Taste von iOS (zum Beispiel auf Instagram). Weddies sendet nie etwas automatisch.</li>
+</ul>
+
+<h2>4. Konto (nur wenn du es möchtest)</h2>
+<ul>
+<li>Ein Konto ist völlig freiwillig. Ohne Konto funktioniert Weddies genauso; dein Logbuch liegt dann nur auf deinem Handy.</li>
+<li>Du meldest dich mit Apple an oder mit einem 6-stelligen Code, den du per E-Mail bekommst. Es gibt kein Passwort.</li>
+<li><strong>Was gespeichert wird:</strong> deine E-Mail-Adresse (oder die Weiterleitungsadresse von Apple, wenn du „E-Mail-Adresse verbergen“ wählst), dein Name, falls Apple ihn übermittelt, eine Konto-ID und mit welchen Methoden du dich anmeldest. Unser Hosting-Anbieter Supabase speichert zur Sicherheit technische Anmeldedaten (etwa Zeitpunkt und IP-Adresse).</li>
+<li><strong>Dein Logbuch im Konto:</strong> Besuche, Bewertungen, Preise, Notizen, Anzahl der Biere, abgehakte Grounds, eigene Spiele, eigene Vereine und Stadien, korrigierte Stadionorte sowie die Einstellungen „mein(e) Verein(e)“, die Zählregel und „Bier ausblenden“. Deine Fotos gehören nicht dazu; sie bleiben auf deinem Handy.</li>
+<li><strong>Wofür:</strong> nur, um dein Logbuch sicher aufzubewahren und auf deinen anderen Handys anzuzeigen (zum Beispiel nach dem Wechsel auf ein neues Handy). Nie für Werbung, und nie weitergegeben oder verkauft.</li>
+<li><strong>Wer es sehen kann:</strong> nur du. Regeln in der Datenbank (Row Level Security) sorgen dafür, dass nur du deine Daten lesen und ändern kannst. Der Entwickler hat als Administrator technischen Zugriff, schaut aber nur hinein, wenn du darum bittest (etwa bei einem Problem) oder wenn das Gesetz es verlangt.</li>
+<li>Deine E-Mail-Adresse wird nur genutzt, um dir den Anmeldecode zu schicken. Diese E-Mail verschickt Supabase über den E-Mail-Dienst Resend. Keine Newsletter, keine Werbung.</li>
+<li><strong>Konto löschen:</strong> jederzeit in der App über Profil → Konto löschen. Alles in deinem Konto wird dann sofort gelöscht, auch dein Benutzername, dein Profilfoto und deine Freundschaften. Das Logbuch auf deinem Handy bleibt erhalten. Du kannst auch eine E-Mail schicken; dann erledigt der Entwickler das für dich.</li>
+</ul>
+
+<h2>5. Freunde (nur wenn du es möchtest, mit Konto)</h2>
+<ul>
+<li>Du wählst einen Benutzernamen. Andere können dich darüber finden, sehen in den Suchergebnissen aber nur diesen Benutzernamen. Ein Einladungslink, den du teilst, enthält deinen Benutzernamen.</li>
+<li>Erst wenn du eine Freundschaftsanfrage annimmst (oder die andere Person deine), seht ihr voneinander: Profilfoto, Benutzername, Verein, Anzahl der Grounds, Spiele und Länder, Abzeichen, Fortschritt pro Liga und die Karte mit Grounds. Mit dem Schalter „Freunde sehen meine geplanten Spiele“ (standardmäßig an) sehen sie auch, bei welchen Spielen du im Stadion sein willst.</li>
+<li>Deine Bewertungen, Notizen, Preise und Fotos von Besuchen sehen Freunde <strong>nie</strong>.</li>
+<li>Ein Profilfoto ist freiwillig. Es wird auf 400 × 400 Pixel verkleinert und in einem geschützten Speicher bei Supabase in der EU abgelegt; nur du und deine Freunde können es sehen.</li>
+<li>Du kannst jederzeit eine Freundschaft beenden, jemanden blockieren (die Person sieht dann nichts mehr von dir und kann dich nicht mehr finden oder dir Anfragen schicken) und jemanden melden. Eine Meldung enthält dein Konto, das gemeldete Konto und dessen Benutzernamen, den Grund und deine optionale Erläuterung. Der Entwickler prüft Meldungen innerhalb von 24 Stunden und kann Inhalte oder Konten entfernen, die gegen die Regeln verstoßen. Meldungen werden so lange aufbewahrt, wie es für ihre Bearbeitung und zur Vermeidung von wiederholtem Missbrauch nötig ist.</li>
+<li>Diese Daten werden nur genutzt, damit Freunde funktioniert: nicht für Werbung, und nie weitergegeben oder verkauft.</li>
+</ul>
+
 <div class="middenvak onthul" aria-hidden="true"><span class="lijn"></span><svg class="middencirkel" viewBox="-110 -110 220 220" width="220" height="220"><path class="lijntje" pathLength="1" d="M0 -95A95 95 0 1 1 0 95A95 95 0 1 1 0 -95"/><circle class="stip" cx="0" cy="0" r="4.5"/></svg></div>
-<h2>Spielerdaten</h2>
-<ul><li>Wenn du auf einen Spieler tippst, lädt die App die Daten dieses Spielers (Foto, Geburtsdatum, Verein, Statistiken) von einem Server von Weddies bei Supabase in der EU, der sie bei API-Football abfragt. Dabei wird nur die Nummer des Spielers übermittelt, nichts über dich. Um Missbrauch zu verhindern, wird eine unumkehrbar verschlüsselte Version deiner IP-Adresse höchstens 2 Stunden gespeichert.</li><li>Was du selbst mit einem Spieler erlebt hast („Du hast ihn 7-mal live gesehen“), berechnet die App auf deinem Handy; das geht nirgendwohin.</li></ul>
-<h2>Spieldaten und Logos</h2>
-<ul><li>Die App lädt Spiele von einer Website auf GitHub Pages und Vereinslogos vom Server von API-Football (api-sports.io). Wie bei jeder Website erhalten diese Server dabei technische Daten wie deine IP-Adresse. Weddies schickt keine weiteren Daten mit.</li></ul>
-<h2>Feedback und Kontakt</h2>
-<ul><li>Wenn du über „Feedback“ eine Nachricht schickst, geht sie als normale E-Mail aus deiner eigenen Mail-App an den Entwickler. Du siehst die E-Mail, bevor du sie abschickst. Standardmäßig stehen darin auch die App-Version, die iOS-Version, das iPhone-Modell und die Sprache; das kannst du ausschalten.</li><li>Der Entwickler verwendet deine E-Mail nur, um Weddies zu verbessern und dir gegebenenfalls zu antworten, und gibt sie an niemanden weiter.</li><li>Wählst du eine Instagram-DM, läuft das über Instagram; dafür gilt die Datenschutzrichtlinie von Instagram.</li></ul>
-<h2>Meldungen an Weddies (nur wenn du es möchtest)</h2>
-<ul><li>Wenn du selbst ein Spiel hinzufügst oder ein Ergebnis, eine Anstoßzeit oder ein Stadion korrigierst, kannst du „An Weddies melden“ wählen (oder die Einstellung „Automatisch melden“ einschalten). Dann schickt die App nur die Fußballdaten: die Vereine, das Stadion und seinen Standort, die Liga, das Ergebnis, den Anstoß und die Spielnummer.</li><li>Nichts über dich wird mitgeschickt: kein Name, keine E-Mail-Adresse, kein Gerät und nicht, wo du bist.</li><li>Die Meldungen landen in einer Datenbank von Weddies bei Supabase in der EU (Frankfurt). Supabase sieht dabei, wie jede Website, deine IP-Adresse; Weddies speichert sie nicht. Der Entwickler verwendet die Meldungen nur, um die Spiel- und Stadiondaten in Weddies zu verbessern.</li></ul>
-<h2>Weddies Plus (Käufe)</h2>
-<ul><li>Weddies Plus kaufst du über den App Store. Die Zahlung wickelt Apple ab; Weddies bekommt weder Namen noch E-Mail-Adresse oder Zahlungsdaten zu sehen.</li><li>Die App fragt nur beim App Store nach, ob du Plus hast (ein Abo oder lebenslang). Das geschieht auf deinem iPhone; nichts geht an einen Server von Weddies.</li><li>Kündigen und verwalten kannst du es in den Einstellungen deines Apple-Accounts. Für Käufe gilt die Datenschutzrichtlinie von Apple.</li></ul>
-<h2>Kein Tracking, keine Werbung</h2>
-<ul><li>Weddies enthält keine Werbung, keine Analyse- oder Statistikdienste und verfolgt dich nicht in anderen Apps oder Websites.</li></ul>
-<h2>Kinder</h2>
-<ul><li>Weddies ist nicht speziell für Kinder gemacht und erhebt nur personenbezogene Daten, wenn du selbst einen Account anlegst.</li></ul>
+<h2>6. Spielerseiten</h2>
+<ul>
+<li>Tippst du auf einen Spieler, lädt die App dessen Daten (Foto, Geburtsdatum, Verein, Statistiken) von einem Weddies-Server bei Supabase in der EU, der sie beim Fußballdatendienst API-Football (API-Sports) abruft. Übertragen wird nur die Nummer des Spielers, nichts über dich.</li>
+<li>Um Missbrauch zu verhindern, wird eine nicht umkehrbar verschlüsselte (gehashte) Form deiner IP-Adresse höchstens 2 Stunden gespeichert.</li>
+<li>Was du mit einem Spieler verbindest („Du hast ihn 7-mal live gesehen“), berechnet die App auf deinem Handy; das wird nirgendwohin gesendet.</li>
+</ul>
+
+<h2>7. Spieldaten, Logos und Fotos</h2>
+<ul>
+<li>Die App lädt Spiele, Ergebnisse und Tabellen aus dem Speicher von Weddies bei Supabase (EU), mit einer Kopie auf GitHub Pages als Reserve. Vereins- und Ligalogos sowie Spielerfotos kommen von api-sports.io.</li>
+<li>Wie bei jeder Website erhalten diese Server technische Daten wie deine IP-Adresse, wenn die App etwas herunterlädt. Weddies sendet keine weiteren Daten mit und keine Kennung, über die du erkennbar wärst. Die Anbieter können dies kurz in ihren Protokollen speichern, für Sicherheit und Fehlerbehebung.</li>
+</ul>
+
+<h2>8. Meldungen an Weddies (nur wenn du es möchtest)</h2>
+<ul>
+<li>Fügst du selbst ein Spiel hinzu oder korrigierst du ein Ergebnis, eine Anstoßzeit oder ein Stadion, kannst du „An Weddies melden“ wählen (oder „Automatisch melden“ einschalten). Die App sendet dann nur Fußballdaten: die Vereine, das Stadion und seinen Ort, die Liga, das Ergebnis, die Anstoßzeit und die Spielnummer.</li>
+<li>Über dich wird nichts gesendet: kein Name, keine E-Mail-Adresse, kein Gerät und nicht, wo du bist.</li>
+<li>Die Meldungen landen in einer Datenbank von Weddies bei Supabase in der EU (Frankfurt). Supabase sieht dabei, wie jede Website, deine IP-Adresse; Weddies speichert sie nicht. Meldungen werden nur genutzt, um die Spiel- und Stadiondaten in Weddies zu verbessern.</li>
+</ul>
+
+<h2>9. Feedback und Kontakt</h2>
+<ul>
+<li>Feedback, das du über „Feedback“ sendest, ist eine normale E-Mail aus deiner eigenen Mail-App an den Entwickler. Du siehst die E-Mail, bevor du sie abschickst. Standardmäßig enthält sie die App-Version, die iOS-Version, das iPhone-Modell und die Sprache; das kannst du ausschalten.</li>
+<li>Deine E-Mail wird nur genutzt, um dir zu antworten und Weddies zu verbessern, bleibt nicht länger als nötig im Postfach des Entwicklers (Gmail) und wird an niemanden weitergegeben.</li>
+<li>Schreibst du lieber über Instagram, gilt die Datenschutzrichtlinie von Instagram.</li>
+</ul>
+
+<h2>10. Weddies Plus (Käufe)</h2>
+<ul>
+<li>Weddies Plus kaufst du über den App Store. Die Zahlung wickelt Apple ab; Weddies sieht nie deinen Namen, deine E-Mail-Adresse oder deine Zahlungsdaten.</li>
+<li>Die App fragt nur beim App Store auf deinem iPhone nach, ob du Plus hast. Es wird nichts an einen Weddies-Server gesendet.</li>
+<li>Ein Abo verwaltest oder kündigst du in den Einstellungen deines Apple Accounts. Für Käufe gilt die Datenschutzrichtlinie von Apple.</li>
+</ul>
+
+<h2>11. Links zu anderen Diensten</h2>
+<ul>
+<li>Manche Tasten öffnen eine andere App oder Website, zum Beispiel eine Google-Suche nach Tickets, eine Route in Apple Karten oder Instagram. Weddies übergibt nur, was für diesen Link nötig ist (etwa die Vereinsnamen). Ab dann gilt die Datenschutzrichtlinie dieses Dienstes.</li>
+</ul>
+
+<h2>12. Keine Werbung, kein Tracking</h2>
+<ul>
+<li>Weddies enthält keine Werbung, keine Analyse- oder Statistikdienste und keinen Code von Drittanbietern (SDKs). Die App verfolgt dich nicht über andere Apps oder Websites und nutzt die Werbe-ID nicht.</li>
+</ul>
+
+<h2>13. Dienstleister</h2>
+<p>Weddies nutzt einige Dienstleister. Sie verarbeiten Daten nur im Auftrag von Weddies, für die oben beschriebenen Funktionen:</p>
+<ul>
+<li><strong>Supabase</strong> (Server in Frankfurt, Deutschland): Konten, abgeglichene Logbücher, Freunde, Profilfotos, der Spielerserver, Spieldaten und Meldungen.</li>
+<li><strong>Resend</strong> (USA): Versand des Anmeldecodes per E-Mail.</li>
+<li><strong>GitHub</strong> (USA): Reservekopie der Spieldaten und Hosting dieser Website.</li>
+<li><strong>API-Sports / api-sports.io</strong>: Vereinslogos und Spielerfotos; Spielerdaten über den Weddies-Server.</li>
+<li><strong>Apple</strong>: Mit Apple anmelden, Apple Karten, Käufe im App Store und iCloud-Backup.</li>
+<li><strong>Google</strong> (Gmail): das Postfach, in dem Feedback-E-Mails ankommen.</li>
+</ul>
+<p>Einige dieser Dienstleister sitzen in den USA. Werden personenbezogene Daten außerhalb des Europäischen Wirtschaftsraums übermittelt, geschieht das auf Grundlage des EU-US Data Privacy Framework oder der Standardvertragsklauseln der Europäischen Kommission.</p>
+
+<h2>14. Rechtsgrundlagen</h2>
+<ul>
+<li><strong>Vertragserfüllung</strong> (Art. 6 Abs. 1 lit. b DSGVO): dein Konto, der Abgleich deines Logbuchs, Freunde, Anmelde-E-Mails und Spielerseiten, weil du diese Funktionen nutzen möchtest.</li>
+<li><strong>Berechtigtes Interesse</strong> (Art. 6 Abs. 1 lit. f DSGVO): Sicherheit und Schutz vor Missbrauch (etwa die gehashte IP-Adresse und technische Protokolle), Bearbeitung von Meldungen und Blockierungen, Beantwortung deiner Nachrichten und Verbesserung der Spiel- und Stadiondaten.</li>
+<li><strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO): Zugriff auf Standort, Kamera und Fotos, das freiwillige Profilfoto und die freiwilligen Geräteangaben im Feedback. Du kannst deine Einwilligung jederzeit widerrufen, zum Beispiel in der iOS-App Einstellungen.</li>
+</ul>
+
+<h2>15. Sicherheit</h2>
+<ul>
+<li>Alle Verbindungen sind verschlüsselt (HTTPS). Deine Anmeldesitzung liegt im iOS-Schlüsselbund. Regeln in der Datenbank sorgen dafür, dass nur du auf deine Kontodaten zugreifen kannst. Weddies erhebt so wenige Daten wie möglich.</li>
+</ul>
+
+<h2>16. Deine Rechte</h2>
+<ul>
+<li>Du hast das Recht auf Auskunft, Berichtigung und Löschung deiner Daten, auf Einschränkung der Verarbeitung, auf Widerspruch, auf Datenübertragbarkeit und auf Widerruf deiner Einwilligung.</li>
+<li>Vieles davon kannst du selbst in der App erledigen: deine Daten ändern, dein Logbuch exportieren („Logbuch exportieren (CSV)“) und dein Konto löschen (Profil → Konto löschen).</li>
+<li>Für alles andere schreib an <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>. Du bekommst innerhalb eines Monats eine Antwort.</li>
+<li>Außerdem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, etwa bei der Datenschutzbehörde deines Landes oder bei der niederländischen Autoriteit Persoonsgegevens (<a href="https://autoriteitpersoonsgegevens.nl">autoriteitpersoonsgegevens.nl</a>).</li>
+</ul>
+
+<h2>17. Kinder</h2>
+<ul>
+<li>Weddies richtet sich nicht an Kinder unter 13 Jahren und erhebt nicht wissentlich ihre personenbezogenen Daten. Wenn du jünger als 16 bist, erstelle ein Konto nur mit Erlaubnis eines Elternteils oder Erziehungsberechtigten.</li>
+<li>Glaubst du, dass ein Kind ohne Erlaubnis ein Konto erstellt hat? Schreib uns, dann löschen wir es.</li>
+</ul>
+
+<h2>18. Änderungen</h2>
+<p>Ändert sich diese Datenschutzerklärung, steht die neue Fassung mit neuem Datum auf dieser Seite. Wichtige Änderungen nennen wir auch in der Beschreibung des App-Updates.</p>
+
+<h2>19. Kontakt</h2>
+<p>Fragen zum Datenschutz oder zu dieser Erklärung? Schreib an <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</p>
 <h2>Diese Website</h2>
-<ul><li>Diese Website (weddiesapp.com) verwendet keine Cookies, keine Analyse und kein Tracking. Sie merkt sich nur in deinem eigenen Browser, welche Sprache du wählst. Die Website liegt auf GitHub Pages; wie bei jeder Website erhält GitHub dabei technische Daten wie deine IP-Adresse.</li></ul>
-<h2>Fragen</h2>
-<p>Fragen zu dieser Datenschutzerklärung? Schreib an <a href="mailto:kithavers@gmail.com">kithavers@gmail.com</a>.</p>
-<p>Wenn sich diese Erklärung ändert, steht die neue Version auf dieser Seite.</p>
+<ul><li>Diese Website verwendet keine Cookies, keine Analyse und kein Tracking. Sie merkt sich nur in deinem eigenen Browser, welche Sprache du wählst. Die Startseite lädt die heutigen Spiele aus denselben öffentlichen Dateien wie die App; die Website liegt auf GitHub Pages, und wie bei jeder Website erhält GitHub dabei technische Daten wie deine IP-Adresse.</li></ul>
 </div>
 
 </main>
@@ -157,6 +566,7 @@
       <h3 data-t="v_juridisch">Juridisch</h3>
       <a href="privacy" data-t="v_privacy">Privacybeleid</a>
       <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" data-t="v_voorwaarden">Gebruiksvoorwaarden</a>
+      <a href="regels" data-t="v_regels">Regels</a>
     </nav>
     <nav class="voet-kolom" aria-label="Contact">
       <h3 data-t="v_contact">Contact</h3>
@@ -171,12 +581,12 @@
 </footer>
 <script>
 window.TEKSTEN = {
-  nl: { titel: "Weddies – Privacybeleid", kop: "Privacybeleid", bijgewerkt: "Laatst bijgewerkt: 29-10-2026", f_home: "Home", f_privacy: "Privacy" },
-  en: { titel: "Weddies – Privacy Policy", kop: "Privacy Policy", bijgewerkt: "Last updated: 29 October 2026", f_home: "Home", f_privacy: "Privacy" },
-  de: { titel: "Weddies – Datenschutzerklärung", kop: "Datenschutzerklärung", bijgewerkt: "Zuletzt aktualisiert: 29.10.2026", f_home: "Start", f_privacy: "Datenschutz" }
+  nl: { titel: "Weddies – Privacybeleid", kop: "Privacybeleid", bijgewerkt: "Laatst bijgewerkt: 4 november 2026", f_home: "Home", f_privacy: "Privacy" },
+  en: { titel: "Weddies – Privacy Policy", kop: "Privacy Policy", bijgewerkt: "Last updated: 4 November 2026", f_home: "Home", f_privacy: "Privacy" },
+  de: { titel: "Weddies – Datenschutzerklärung", kop: "Datenschutzerklärung", bijgewerkt: "Zuletzt aktualisiert: 4. November 2026", f_home: "Start", f_privacy: "Datenschutz" }
 };
 </script>
-<script src="taal.js?v=11"></script>
-<script src="beweging.js?v=11"></script>
+<script src="taal.js?v=16"></script>
+<script src="beweging.js?v=16"></script>
 </body>
 </html>

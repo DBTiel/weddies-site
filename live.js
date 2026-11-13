@@ -3,8 +3,10 @@
 // dan blijft de band met competitienamen gewoon staan.
 (function () {
   var BRON = "https://kithaversweddies.github.io/weddies-data/wedstrijden/";
-  // De 100 competities in Weddies (competitie-ID -> vlag). Andere competities in de bestanden tellen niet mee.
-  var LIGA = window.WEDDIES_LIGA || {};
+  // Vlag per land (naam zoals in de bestanden). De bestanden bevatten precies de competities die Weddies volgt,
+  // dus we tellen alles, net als de app. Eerst stond hier een vaste lijst van 100 competities: die liep achter
+  // toen er landen bijkwamen (site 31 wedstrijden, app 43).
+  var VLAG = {"Netherlands": "nl", "Belgium": "be", "Germany": "de", "England": "eng", "Scotland": "sco", "France": "fr", "Spain": "es", "Italy": "it", "Denmark": "dk", "Portugal": "pt", "Austria": "at", "Switzerland": "ch", "Poland": "pl", "Czech-Republic": "cz", "Sweden": "se", "Norway": "no"};
   var LIVE = { "1H": 1, "HT": 1, "2H": 1, "ET": 1, "BT": 1, "P": 1, "LIVE": 1, "INT": 1 };
   var KLAAR = { "FT": 1, "AET": 1, "PEN": 1, "PST": 1, "CANC": 1, "ABD": 1, "AWD": 1, "WO": 1 };
 
@@ -22,8 +24,10 @@
       .then(function (r) { return r.ok ? r.json() : { wedstrijden: [] }; })
       .then(function (j) {
         var comps = j.competities || {};
-        return (j.wedstrijden || []).filter(function (m) { return LIGA[m.competitie]; })
-          .map(function (m) { m.ligaNaam = (comps[m.competitie] || {}).naam || ""; return m; });
+        return (j.wedstrijden || []).map(function (m) {
+          var c = comps[m.competitie] || {};
+          m.ligaNaam = c.naam || ""; m.vlag = VLAG[c.land] || ""; return m;
+        });
       });
   }
   function T() { return (window.TEKSTEN || {})[document.documentElement.lang] || {}; }
@@ -38,7 +42,7 @@
     if (lijst.length < 5 && staat.morgen.length > lijst.length) { lijst = staat.morgen; sleutel = "band_morgen"; }
     if (!lijst.length || !t[sleutel]) return null;
     var landen = {};
-    lijst.forEach(function (m) { landen[LIGA[m.competitie]] = 1; });
+    lijst.forEach(function (m) { landen[m.vlag || m.ligaNaam] = 1; });
     var k = Object.keys(landen).length;
     var nf = new Intl.NumberFormat(document.documentElement.lang);
     return t[sleutel].replace("{n}", nf.format(lijst.length)).replace("{k}", nf.format(k))
@@ -59,7 +63,7 @@
       var info = live
         ? '<span class="live">' + esc(t.band_live || "LIVE") + "</span>" + (m.stand ? '<span class="tijd">' + m.stand[0] + "–" + m.stand[1] + "</span>" : "")
         : '<span class="tijd">' + esc(tijd(m)) + "</span>";
-      return { html: '<img class="vlag" src="img/vlag/' + LIGA[m.competitie] + '.svg" alt="" width="24" height="16">' +
+      return { html: (m.vlag ? '<img class="vlag" src="img/vlag/' + m.vlag + '.svg" alt="" width="24" height="16">' : "") +
         '<span class="wedstrijd"><span class="regel1"><span class="liga">' + esc(m.ligaNaam) + "</span>" + info + "</span>" +
         '<span class="regel2">' + esc(m.thuis.naam) + ' <span class="vs">vs</span> ' + esc(m.uit.naam) + "</span></span>" };
     }
