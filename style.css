@@ -558,9 +558,22 @@ h2 { font-size: clamp(30px, 3.8vw, 46px); line-height: 1.08; letter-spacing: -.0
 .europa-kaart svg { width: 100%; height: auto; display: block; overflow: visible; }
 .europa-kaart .land circle { fill: rgba(249, 245, 235, .75); transition: fill .25s ease, opacity .25s ease; }
 .europa-kaart[data-land] .land circle { opacity: .14; }
-.europa-kaart[data-land="nl"] .land-nl circle, .europa-kaart[data-land="be"] .land-be circle, .europa-kaart[data-land="eng"] .land-eng circle,
-.europa-kaart[data-land="sco"] .land-sco circle, .europa-kaart[data-land="de"] .land-de circle, .europa-kaart[data-land="fr"] .land-fr circle,
-.europa-kaart[data-land="es"] .land-es circle, .europa-kaart[data-land="it"] .land-it circle, .europa-kaart[data-land="dk"] .land-dk circle {
+.europa-kaart[data-land="nl"] .land-nl circle,
+.europa-kaart[data-land="be"] .land-be circle,
+.europa-kaart[data-land="de"] .land-de circle,
+.europa-kaart[data-land="eng"] .land-eng circle,
+.europa-kaart[data-land="sco"] .land-sco circle,
+.europa-kaart[data-land="fr"] .land-fr circle,
+.europa-kaart[data-land="es"] .land-es circle,
+.europa-kaart[data-land="it"] .land-it circle,
+.europa-kaart[data-land="dk"] .land-dk circle,
+.europa-kaart[data-land="pt"] .land-pt circle,
+.europa-kaart[data-land="at"] .land-at circle,
+.europa-kaart[data-land="ch"] .land-ch circle,
+.europa-kaart[data-land="pl"] .land-pl circle,
+.europa-kaart[data-land="cz"] .land-cz circle,
+.europa-kaart[data-land="se"] .land-se circle,
+.europa-kaart[data-land="no"] .land-no circle {
   opacity: 1; fill: var(--accent);
 }
 
